@@ -13,11 +13,19 @@ const Shop = () => {
     .then((data) => setProducts(data.products))
   },[])
 
+  // Get unique Categories 
+  const productCategories = products.reduce((acc,category) =>{
+    if(!acc.includes(category.category)){
+      acc.push(category.category);
+    }
+    return acc;
+  },[])
+
   return (
-    <div className="bg-[#F8F8F8]">
+    <div>
       <div className="container lg:max-w-[1530px] mx-auto px-3">
         <div className="flex gap-5">
-          <ShopSidebar />
+          <ShopSidebar categories={productCategories} />
           <ShopProducts products={products} searchTitle={searchTitle} onSearch={setSearchTitle} />
         </div>
       </div>
