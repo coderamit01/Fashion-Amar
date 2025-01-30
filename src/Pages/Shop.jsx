@@ -5,6 +5,7 @@ import { useEffect } from "react";
 
 const Shop = () => {
   const [products,setProducts] = useState([]);
+  const [searchTitle,setSearchTitle] = useState('');
 
   useEffect(() => {
     fetch('https://dummyjson.com/products')
@@ -13,12 +14,11 @@ const Shop = () => {
   },[])
 
   return (
-    <div>
+    <div className="bg-[#F8F8F8]">
       <div className="container lg:max-w-[1530px] mx-auto px-3">
         <div className="flex gap-5">
           <ShopSidebar />
-          {console.log(products)}
-          <ShopProducts products={products} />
+          <ShopProducts products={products} searchTitle={searchTitle} onSearch={setSearchTitle} />
         </div>
       </div>
     </div>
