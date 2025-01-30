@@ -6,6 +6,7 @@ import { useEffect } from "react";
 const Shop = () => {
   const [products,setProducts] = useState([]);
   const [searchTitle,setSearchTitle] = useState('');
+  const [selectedCategory,setSeletedCategory] = useState([]);
 
   useEffect(() => {
     fetch('https://dummyjson.com/products')
@@ -21,12 +22,29 @@ const Shop = () => {
     return acc;
   },[])
 
+  const handleCategorySelect  = (category) => {
+    setSeletedCategory((prev) => 
+      prev.includes(category) ? prev.filter(item => item !== category) : [...prev,category]
+    )
+  }
+
+
+  // Filter Products
+  const filterProducts = products.filter((product) => {
+    const matchesCategory = selectedCategory.length === 0 || selectedCategory.includes(product.category);
+    return matchesCategory;
+  })
+
   return (
     <div>
       <div className="container lg:max-w-[1530px] mx-auto px-3">
         <div className="flex gap-5">
-          <ShopSidebar categories={productCategories} />
-          <ShopProducts products={products} searchTitle={searchTitle} onSearch={setSearchTitle} />
+          <ShopSidebar 
+          categories={productCategories}
+          selectedCategory={selectedCategory}
+          onSelectedCategory={handleCategorySelect }
+           />
+          <ShopProducts products={filterProducts} searchTitle={searchTitle} onSearch={setSearchTitle} />
         </div>
       </div>
     </div>

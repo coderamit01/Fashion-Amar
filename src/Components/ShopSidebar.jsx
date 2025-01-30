@@ -2,7 +2,7 @@ import CategoryItem from "./CategoryItem";
 import PropTypes from "prop-types";
 
 
-const ShopSidebar = ({categories}) => {
+const ShopSidebar = ({categories,selectedCategory,onSelectedCategory}) => {
 
   return (
     <div className="w-3/12 pt-3">
@@ -11,7 +11,11 @@ const ShopSidebar = ({categories}) => {
         <div className="flex flex-col gap-3">
           {
             categories.map((cat,idx) => (
-              <CategoryItem key={idx} category={cat} />
+              <CategoryItem key={idx}
+              category={cat}
+              isSelected={selectedCategory.includes(cat)}
+              onSelect={onSelectedCategory}
+               />
             ))
           }
         </div>
@@ -20,8 +24,12 @@ const ShopSidebar = ({categories}) => {
   );
 };
 
+
 ShopSidebar.propTypes = {
-  categories: PropTypes.array.isRequired
-}
+  categories: PropTypes.array.isRequired,
+  selectedCategories: PropTypes.array.isRequired,
+  onCategorySelect: PropTypes.func.isRequired,
+};
+
 
 export default ShopSidebar;
