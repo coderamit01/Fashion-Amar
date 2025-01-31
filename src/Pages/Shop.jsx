@@ -28,7 +28,6 @@ const Shop = () => {
     )
   }
 
-
   // Filter Products
   const filterProducts = products.filter((product) => {
     const matchesCategory = selectedCategory.length === 0 || selectedCategory.includes(product.category);
