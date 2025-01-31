@@ -21,6 +21,13 @@ const Shop = () => {
     }
     return acc;
   },[])
+  // Get unique Brand 
+  const productBrands = products.reduce((acc,brand) =>{
+    if(!acc.includes(brand.brand)){
+      acc.push(brand.brand);
+    }
+    return acc;
+  },[])
 
   const handleCategorySelect  = (category) => {
     setSeletedCategory((prev) => 
@@ -42,8 +49,10 @@ const Shop = () => {
           categories={productCategories}
           selectedCategory={selectedCategory}
           onSelectedCategory={handleCategorySelect }
+          brands={productBrands}
            />
           <ShopProducts products={filterProducts} searchTitle={searchTitle} onSearch={setSearchTitle} />
+          {console.log(products)}
         </div>
       </div>
     </div>
