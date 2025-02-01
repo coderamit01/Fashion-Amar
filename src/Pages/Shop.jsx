@@ -42,7 +42,7 @@ const Shop = () => {
   const filterProducts = products.filter((product) => {
     const matchesCategory = selectedCategory.length ? selectedCategory.includes(product.category) : true;
     const matchesBrand = selectBrands.length ? selectBrands.includes(product.brand) : true;
-    return (matchesBrand , matchesCategory);
+    return matchesBrand && matchesCategory;
   })
 
   return (
