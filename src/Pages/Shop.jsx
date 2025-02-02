@@ -47,7 +47,7 @@ const Shop = () => {
 
   return (
     <div>
-      <div className="container lg:max-w-[1530px] mx-auto px-3">
+      <div className="fashion-container">
         <div className="flex flex-col-reverse md:flex-row gap-5">
           <ShopSidebar 
           categories={productCategories}

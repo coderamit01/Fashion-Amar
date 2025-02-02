@@ -8,7 +8,7 @@ const Header = () => {
     <div>
       <TopBar />
       <div className="bg-white py-3">
-      <div className="container lg:max-w-[1530px] mx-auto px-3">
+      <div className="fashion-container">
         <div className="flex items-center justify-between space-x-2">
           <h2 className="text-3xl font-brand font-bold"><Link to="#">Amar <span className="text-brand">Fashion</span></Link></h2>
         <div className="border border-slate-300 rounded w-6/12 relative hidden md:block">
