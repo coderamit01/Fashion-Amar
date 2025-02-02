@@ -17,7 +17,6 @@ const CategoryItem = ({ category, onSelect, isSelected,showCount }) => {
             {category}
           </span>
         </label>
-
       </div>
       {showCount && 
         <span className="h-[28px] w-[28px] p-1 rounded-full bg-[#3BB77E] text-white flex items-center justify-center font-brand text-[12px]">5</span>

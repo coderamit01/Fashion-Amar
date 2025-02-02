@@ -48,7 +48,7 @@ const Shop = () => {
   return (
     <div>
       <div className="container lg:max-w-[1530px] mx-auto px-3">
-        <div className="flex gap-5">
+        <div className="flex flex-col-reverse md:flex-row gap-5">
           <ShopSidebar 
           categories={productCategories}
           selectedCategory={selectedCategory}
@@ -58,7 +58,7 @@ const Shop = () => {
           onSelectBrand={handleBrandSelect}
            />
           <ShopProducts products={filterProducts} searchTitle={searchTitle} onSearch={setSearchTitle} />
-          {console.log(products)}
+          {console.log(filterProducts)}
         </div>
       </div>
     </div>

@@ -14,12 +14,12 @@ const ShopProducts = ({products,searchTitle,onSearch}) => {
   })
 
   return (
-    <div className="p-3 w-9/12">
+    <div className="py-3 md:pl-3 md:w-9/12">
       <div className="flex flex-col gap-4">
         <SeacrhInput searchTitle={searchTitle} onSearch={onSearch} />
         {
           row.length > 0 ? (
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
               {row}
             </div>
           ) : (
