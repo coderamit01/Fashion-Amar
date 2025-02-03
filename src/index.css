@@ -13,3 +13,15 @@
 .fashion-container {
   @apply container lg:max-w-[1530px] mx-auto px-3;
 }
+.swiper-button-prev, .swiper-button-next {
+  @apply transition-all !h-9 !w-9 border-2 border-brand bg-transparent hover:bg-brand text-white rounded;
+}
+.swiper-button-prev:after, .swiper-button-next:after {
+  @apply !text-sm text-white;
+}
+.swiper-pagination-bullet {
+  @apply !h-3 !w-3 border-2 !bg-slate-500 !opacity-90 !border-0;
+}
+.swiper-pagination-bullet-active {
+  @apply scale-[1.2] !bg-brand;
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "image": "../sliderimage/1.jpg",
+    "title": "Discover the Beauty",
+    "shortdesc": "Explore the world of elegance and style with our latest collection.",
+    "buttonText": "Shop Now",
+    "buttonUrl": "/shop"
+  },
+  {
+    "id": "2",
+    "image": "../sliderimage/2.jpg",
+    "title": "Exclusive Offers",
+    "shortdesc": "Grab the best deals on our exclusive products before they're gone!",
+    "buttonText": "View Deals",
+    "buttonUrl": "/shop"
+  },
+  {
+    "id": "3",
+    "image": "../sliderimage/3.jpg",
+    "title": "New Arrivals",
+    "shortdesc": "Check out our latest additions that you'll absolutely love.",
+    "buttonText": "Explore",
+    "buttonUrl": "/shop"
+  },
+  {
+    "id": "4",
+    "image": "../sliderimage/4.jpg",
+    "title": "Join Our Community",
+    "shortdesc": "Stay updated with the latest trends and exclusive member benefits.",
+    "buttonText": "Order Now",
+    "buttonUrl": "/shop"
+  }
+]

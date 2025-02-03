@@ -1,11 +1,10 @@
+import HeroSlider from "../Components/HeroSlider/HeroSlider";
 
 
 const Home = () => {
   return (
     <div>
-      <div className="fashion-container">
-      Home
-      </div>
+      <HeroSlider />
     </div>
   );
 };
