@@ -20,7 +20,7 @@
   @apply !text-sm text-white;
 }
 .swiper-pagination-bullet {
-  @apply !h-3 !w-3 border-2 !bg-slate-500 !opacity-90 !border-0;
+  @apply transition-all !h-3 !w-3 !bg-slate-500 !opacity-90 !border-0;
 }
 .swiper-pagination-bullet-active {
   @apply scale-[1.2] !bg-brand;
