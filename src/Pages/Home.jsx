@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import HeroSlider from "../Components/HeroSlider/HeroSlider";
 import FeaturedCategory from "../Components/FeaturedCategory";
 import HotDeals from "../Components/HotDeals";
+import FeaturedProducts from "../Components/FeaturedProducts";
 
 
 const Home = () => {
@@ -47,6 +48,14 @@ const Home = () => {
             <h2 className="text-4xl font-brand font-bold text-center pb-10">Today Hot <span className="text-brand">Deals</span></h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               <HotDeals products={products} />
+            </div>
+        </div>
+      </div>
+      <div className="py-16">
+        <div className="fashion-container">
+            <h2 className="text-4xl font-brand font-bold text-center pb-10"> <span className="text-brand">Featured </span>Products</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+              <FeaturedProducts products={products} />
             </div>
         </div>
       </div>
