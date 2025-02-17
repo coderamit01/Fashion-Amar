@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "image": "/public/images/banner-1.png",
+    "title": "Everyday Fresh & Clean with Our Products",
+    "btn_text": "shop now",
+    "btn_url": "/"
+  },
+  {
+    "id": 2,
+    "image": "/public/images/banner-2.png",
+    "title": "Make your Breakfast Healthy and Easy",
+    "btn_text": "shop now",
+    "btn_url": "/"
+  },
+  {
+    "id": 3,
+    "image": "/public/images/banner-3.png",
+    "title": "The best Organic Products Online",
+    "btn_text": "shop now",
+    "btn_url": "/"
+  }
+]

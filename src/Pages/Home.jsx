@@ -3,6 +3,7 @@ import HeroSlider from "../Components/HeroSlider/HeroSlider";
 import FeaturedCategory from "../Components/FeaturedCategory";
 import HotDeals from "../Components/HotDeals";
 import FeaturedProducts from "../Components/FeaturedProducts";
+import BannerSection from "../Components/BannerSection/BannerSection";
 
 
 const Home = () => {
@@ -32,33 +33,46 @@ const Home = () => {
   return (
     <div>
       <HeroSlider />
-      <div className="py-12">
+      {/* Category section start  */}
+      <div className="py-8 md:py-12">
         <div className="fashion-container">
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8 gap-5">
             {
-              categories.map((category) => (
+              categories.slice(0,16).map((category) => (
                 <FeaturedCategory key={category.slug} category={category} />
               ))
             }
           </div>
         </div>
       </div>
-      <div className="py-16">
+      {/* Category section end  */}
+      {/* Hot Deals section start  */}
+      <div className="py-5 md:py-10">
         <div className="fashion-container">
-            <h2 className="text-4xl font-brand font-bold text-center pb-10">Today Hot <span className="text-brand">Deals</span></h2>
+            <h2 className="text-4xl font-brand font-bold text-center pb-5 md:pb-12">Today Hot <span className="text-brand">Deals</span></h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               <HotDeals products={products} />
             </div>
         </div>
       </div>
-      <div className="py-16">
+      {/* Hot Deals section end  */}
+      {/* Banner section start  */}
+      <div className="py-5 md:py-10">
         <div className="fashion-container">
-            <h2 className="text-4xl font-brand font-bold text-center pb-10"> <span className="text-brand">Featured </span>Products</h2>
+            <BannerSection />
+        </div>  
+      </div>
+      {/* Banner section end  */}
+      {/* Featured Products section start  */}
+      <div className="py-5 md:py-10">
+        <div className="fashion-container">
+            <h2 className="text-4xl font-brand font-bold text-center pb-5 md:pb-12"> <span className="text-brand">Featured </span>Products</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               <FeaturedProducts products={products} />
             </div>
         </div>
       </div>
+      {/* Featured Products section end  */}
     </div>
     
   );
