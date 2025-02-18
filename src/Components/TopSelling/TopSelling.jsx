@@ -8,7 +8,6 @@ const TopSelling = ({products}) => {
       {
         topSellingProducts.map((product) => (<SmallProductCard key={product.id} product={product} />))
       }
-      {console.log(products)}
     </div>
   );
 };

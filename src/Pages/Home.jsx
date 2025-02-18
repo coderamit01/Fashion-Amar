@@ -90,19 +90,19 @@ const Home = () => {
               <div className="space-y-5">
                 <h4 className="font-brand text-2xl text-fblack font-bold capitalize">Trending Products</h4>
                 <div>
-                  <TrendingProducts />
+                  <TrendingProducts products={products} />
                 </div>
               </div>
               <div className="space-y-5">
                 <h4 className="font-brand text-2xl text-fblack font-bold capitalize">Recently added</h4>
                 <div>
-                  <RecentProducts />
+                  <RecentProducts products={products} />
                 </div>
               </div>
               <div className="space-y-5">
                 <h4 className="font-brand text-2xl text-fblack font-bold capitalize">Top Rated</h4>
                 <div>
-                  <TopRatedProducts />
+                  <TopRatedProducts products={products} />
                 </div>
               </div>
             </div>
