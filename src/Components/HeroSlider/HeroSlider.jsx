@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SlideItem from "./SlideItem";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 // Import Swiper styles
 import 'swiper/css';
 
@@ -27,8 +27,8 @@ const HeroSlider = () => {
   return (
     <div>
       <Swiper
-      modules={[Navigation,Pagination,Autoplay]}
-      navigation={true}
+      modules={[Pagination,Autoplay, EffectFade]}
+      effect="fade"
       autoplay={true}
       pagination={{clickable: true}}
       className="hero-slider"
