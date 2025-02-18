@@ -4,6 +4,10 @@ import FeaturedCategory from "../Components/FeaturedCategory";
 import HotDeals from "../Components/HotDeals";
 import FeaturedProducts from "../Components/FeaturedProducts";
 import BannerSection from "../Components/BannerSection/BannerSection";
+import TopSelling from "../Components/TopSelling/TopSelling";
+import TrendingProducts from "../Components/TrendingProducts/TrendingProducts";
+import RecentProducts from "../Components/RecentProducts/RecentProducts";
+import TopRatedProducts from "../Components/TopRatedProducts/TopRatedProducts";
 
 
 const Home = () => {
@@ -38,7 +42,7 @@ const Home = () => {
         <div className="fashion-container">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8 gap-5">
             {
-              categories.slice(0,16).map((category) => (
+              categories.slice(0,8).map((category) => (
                 <FeaturedCategory key={category.slug} category={category} />
               ))
             }
@@ -73,6 +77,38 @@ const Home = () => {
         </div>
       </div>
       {/* Featured Products section end  */}
+      {/* Top Selling, Trending, Top Rated Products section start  */}
+      <div className="py-5 md:py-10">
+        <div className="fashion-container">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8 lg:gap-10">
+              <div className="space-y-5">
+                <h4 className="font-brand text-2xl text-fblack font-bold capitalize">Top Selling</h4>
+                <div>
+                  <TopSelling products={products} />
+                </div>
+              </div>
+              <div className="space-y-5">
+                <h4 className="font-brand text-2xl text-fblack font-bold capitalize">Trending Products</h4>
+                <div>
+                  <TrendingProducts />
+                </div>
+              </div>
+              <div className="space-y-5">
+                <h4 className="font-brand text-2xl text-fblack font-bold capitalize">Recently added</h4>
+                <div>
+                  <RecentProducts />
+                </div>
+              </div>
+              <div className="space-y-5">
+                <h4 className="font-brand text-2xl text-fblack font-bold capitalize">Top Rated</h4>
+                <div>
+                  <TopRatedProducts />
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      {/* Top Selling, Trending, Top Rated Products section end  */}
     </div>
     
   );
