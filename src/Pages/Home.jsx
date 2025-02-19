@@ -8,6 +8,10 @@ import TopSelling from "../Components/TopSelling/TopSelling";
 import TrendingProducts from "../Components/TrendingProducts/TrendingProducts";
 import RecentProducts from "../Components/RecentProducts/RecentProducts";
 import TopRatedProducts from "../Components/TopRatedProducts/TopRatedProducts";
+import Featured from "../Components/Featured/Featured";
+import { MdOutlineLocalOffer } from "react-icons/md";
+import { BiCodeAlt } from "react-icons/bi";
+import { TbTruckDelivery, TbTruckReturn } from "react-icons/tb";
 
 
 const Home = () => {
@@ -109,6 +113,16 @@ const Home = () => {
         </div>
       </div>
       {/* Top Selling, Trending, Top Rated Products section end  */}
+      <div className="py-5 md:py-10">
+        <div className="fashion-container">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
+              <Featured title="Best prices & offers" icon={<MdOutlineLocalOffer />} />
+              <Featured title="Free delivery" icon={<TbTruckDelivery />} />
+              <Featured title="Great daily deal" icon={<BiCodeAlt />} />
+              <Featured title="Easy returns" icon={<TbTruckReturn />} />
+            </div>
+        </div>
+      </div>
     </div>
     
   );
