@@ -6,9 +6,9 @@ import SeacrhInput from "./SeacrhInput";
 const ShopProducts = ({products,searchTitle,onSearch}) => {
   const row = [];
   products.forEach((product) => {
-    if(product.title.toLowerCase().includes(searchTitle.toLowerCase()) === false){
-      return;
-    }
+    // if(product.title.toLowerCase().includes(searchTitle.toLowerCase()) === false){
+    //   return;
+    // }
     row.push(<ProductCard key={product.id} product={product} />)
     
   })

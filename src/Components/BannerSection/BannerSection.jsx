@@ -23,7 +23,6 @@ const BannerSection = () => {
       {
         banners.map((banner) => (<Banner key={banner.id} banner={banner} />))
       }
-      {console.log(banners)}
     </div>
   );
 };

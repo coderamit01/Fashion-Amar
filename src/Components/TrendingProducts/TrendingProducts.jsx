@@ -10,9 +10,6 @@ const TrendingProducts = ({ products }) => {
       {
         trendingProducts.map((product) => (<SmallProductCard key={product.id} product={product} />))
       }
-      {
-        console.log(trendingProducts)
-      }
     </div>
   );
 };
