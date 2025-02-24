@@ -21,7 +21,6 @@ const ShopArchiveSidebar = ({ categories }) => {
                 >
                   <span className="text-base font-brand text-gray-800 font-[500] capitalize peer-hover:text-[#3BB77E] peer-checked:text-[#3BB77E] ml-6">
                     {cat.name}
-                    {console.log(cat)}
                   </span>
                 </label>
               </div>
