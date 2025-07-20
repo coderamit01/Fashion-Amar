@@ -1,5 +1,4 @@
 import { useParams } from "react-router";
-import ShopSidebar from "../ShopSidebar";
 import { useEffect, useState } from "react";
 import ArchiveProducts from "./ArchiveProducts";
 import ShopArchiveSidebar from "./ShopArchiveSidebar";

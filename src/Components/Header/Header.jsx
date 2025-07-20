@@ -11,7 +11,7 @@ const Header = () => {
       <div className="bg-white py-3">
       <div className="fashion-container">
         <div className="flex items-center justify-between space-x-2">
-          <h2 className="text-3xl font-brand font-bold"><Link to="/">Amar <span className="text-brand">Fashion</span></Link></h2>
+          <h2 className="text-3xl font-brand font-bold"><Link to="/">Amar <span className="text-brand">Bazar</span></Link></h2>
         <div className="border border-slate-300 rounded w-6/12 relative hidden md:block">
           <IoSearchOutline className="absolute top-[10px] left-1 text-xl font-brand text-slate-500" />
           <input type="text" className="py-2 pr-3 pl-7 focus:outline-0 w-full" placeholder="Type Something.." />
