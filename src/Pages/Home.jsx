@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import HeroSlider from "../Components/HeroSlider/HeroSlider";
-import FeaturedCategory from "../Components/FeaturedCategory";
+import FeaturedCategory from "../Components/FeaturedCategory/FeaturedCategory";
 
 
 const Home = () => {
