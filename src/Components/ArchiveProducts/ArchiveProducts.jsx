@@ -14,8 +14,6 @@ const ArchiveProducts = ({loading,products,setSearchText}) => {
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
-      
-          {console.log(products)}
     </div>
   );
 };

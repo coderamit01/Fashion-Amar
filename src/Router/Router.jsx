@@ -3,6 +3,7 @@ import Layout from '../Layout/Layout';
 import Shop from '../Pages/Shop';
 import Home from '../Pages/Home';
 import SingleProduct from '../Components/SingleProduct/SingleProduct';
+import NotFound from '../Pages/NotFound';
 
 const Router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const Router = createBrowserRouter([
         element: <SingleProduct />
       },
     ]
+  },
+  {
+    path: '*',
+    element: <NotFound />
   }
 ])
 
