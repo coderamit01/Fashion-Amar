@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ArchiveProducts from "../Components/ArchiveProducts/ArchiveProducts";
 import ProductSidebar from "../Components/ProductSidebar/ProductSidebar";
-import useProductStore from "../services/ProductStore";
+import { useProductStore } from "../services/Store";
 
 const Shop = () => {
   const productList = useProductStore((state) => state.productList);

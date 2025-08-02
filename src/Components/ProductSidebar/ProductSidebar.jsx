@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import useProductStore from "../../services/ProductStore";
+import { useProductStore } from "../../services/Store";
 
 const ProductSidebar = ({ handleCategory }) => {
   const productList = useProductStore((state) => state.productList);
@@ -39,9 +39,17 @@ const ProductSidebar = ({ handleCategory }) => {
             id="cars"
             className="border border-slate-300 rounded outline-none p-1 text-base capitalize text-slate-800 font-brand font-semibold"
           >
-            <option className="text-base capitalize text-slate-800 font-brand font-semibold">Select Category</option>
+            <option className="text-base capitalize text-slate-800 font-brand font-semibold">
+              Select Category
+            </option>
             {categories.map((category, idx) => (
-              <option  key={idx} value={category} className="text-base capitalize text-slate-800 font-brand font-semibold">{category}</option>
+              <option
+                key={idx}
+                value={category}
+                className="text-base capitalize text-slate-800 font-brand font-semibold"
+              >
+                {category}
+              </option>
             ))}
           </select>
         </div>

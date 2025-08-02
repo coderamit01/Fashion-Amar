@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import CartBtn from "../Share/CartBtn";
+import { useCart } from "../../services/Store";
 
 const ProductCard = ({ product }) => {
   const {
@@ -12,6 +13,7 @@ const ProductCard = ({ product }) => {
     discountPercentage,
     brand,
   } = product;
+  const addCart = useCart((state) => state.addCart);
   const discountPrice = price - (price * discountPercentage) / 100;
 
   return (
@@ -42,7 +44,7 @@ const ProductCard = ({ product }) => {
             </span>
           </div>
         </div>
-        <CartBtn text="Add to Bag" />
+        <CartBtn text="Add to Bag" product={product} />
       </div>
     </div>
   );

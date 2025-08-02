@@ -1,7 +1,7 @@
 import axios from "axios";
 import { create } from "zustand";
 
-const useProductStore = create((set) => ({
+export const useProductStore = create((set) => ({
   // Get all Products
   productList: [],
   fetchProductList: async () => {
@@ -28,4 +28,9 @@ const useProductStore = create((set) => ({
 
 }));
 
-export default useProductStore;
+export const useCart = create((set) => ({
+  cart: [],
+  addCart: (product) => set((state) => ({cart: [...state.cart, product]})),
+  removeCart: (productId) => set((state) => ({cart: state.cart.filter(product => product.id !== productId)})),
+  clearCart: () => set({cart: []}),
+}))
