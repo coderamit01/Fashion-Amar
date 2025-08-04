@@ -3,9 +3,16 @@ import { FiShoppingCart } from "react-icons/fi";
 import { Link, NavLink } from "react-router";
 import TopBar from "./TopBar";
 import { useCart } from "../../services/Store";
+import { useState } from "react";
+import SideCart from "../Sidecart/SideCart";
 
 const Header = () => {
   const cart = useCart((state) => state.cart);
+  const [sideCartOpen, setSideCartOpen] = useState(false);
+  const handleSidecart = () => {
+    setSideCartOpen(!sideCartOpen);
+  }
+  console.log(sideCartOpen);
   return (
     <div className="shadow">
       <TopBar />
@@ -52,16 +59,16 @@ const Header = () => {
               </NavLink>
             </div>
             <div className="flex items-center space-x-6">
-              <div className="relative">
+              <div onClick={() => handleSidecart()} className="relative">
                 <span className="inline-flex w-5 h-5 items-center justify-center bg-brand text-white font-brand text-sm font-semibold rounded-full absolute top-[-8px] right-[-12px]">
                   {cart.length}
-                  {console.log(cart)}
                 </span>
                 <Link to="/shop">
                   <FiShoppingCart className="text-xl cursor-pointer" />
                 </Link>
               </div>
               <FaRegUser className="text-xl cursor-pointer" />
+              <SideCart handleSidecart={handleSidecart} sideCartOpen={sideCartOpen} />
             </div>
           </div>
         </div>
