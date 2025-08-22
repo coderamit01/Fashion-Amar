@@ -25,12 +25,14 @@ export const useProductStore = create((set) => ({
       console.log("Something went wrong", error);
     }
   },
-
 }));
 
 export const useCart = create((set) => ({
   cart: [],
-  addCart: (product) => set((state) => ({cart: [...state.cart, product]})),
-  removeCart: (productId) => set((state) => ({cart: state.cart.filter(product => product.id !== productId)})),
-  clearCart: () => set({cart: []}),
-}))
+  addCart: (product) => set((state) => ({ cart: [...state.cart, product] })),
+  removeCart: (productId) =>
+    set((state) => ({
+      cart: state.cart.filter((product) => product.id !== productId),
+    })),
+  clearCart: () => set({ cart: [] }),
+}));

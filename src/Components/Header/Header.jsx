@@ -12,7 +12,6 @@ const Header = () => {
   const handleSidecart = () => {
     setSideCartOpen(!sideCartOpen);
   }
-  console.log(sideCartOpen);
   return (
     <div className="shadow">
       <TopBar />
@@ -63,9 +62,7 @@ const Header = () => {
                 <span className="inline-flex w-5 h-5 items-center justify-center bg-brand text-white font-brand text-sm font-semibold rounded-full absolute top-[-8px] right-[-12px]">
                   {cart.length}
                 </span>
-                <Link to="/shop">
                   <FiShoppingCart className="text-xl cursor-pointer" />
-                </Link>
               </div>
               <FaRegUser className="text-xl cursor-pointer" />
               <SideCart handleSidecart={handleSidecart} sideCartOpen={sideCartOpen} />
