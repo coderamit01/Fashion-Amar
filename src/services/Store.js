@@ -28,11 +28,42 @@ export const useProductStore = create((set) => ({
 }));
 
 export const useCart = create((set) => ({
-  cart: [],
-  addCart: (product) => set((state) => ({ cart: [...state.cart, product] })),
+  cart: JSON.parse(localStorage.getItem("cart")) || [],
+
+  // Add to cart
+  addCart: (product) =>
+    set((state) => {
+      const existProduct = state.cart.find((item) => item.id === product.id);
+
+      let updateCart;
+      if (existProduct) {
+        updateCart = state.cart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      } else {
+        updateCart = [...state.cart, { id: product.id, quantity: 1 }];
+      }
+
+      localStorage.setItem("cart", JSON.stringify(updateCart));
+      return { cart: updateCart };
+    }),
+  
+  // Remove From Cart
   removeCart: (productId) =>
-    set((state) => ({
-      cart: state.cart.filter((product) => product.id !== productId),
-    })),
-  clearCart: () => set({ cart: [] }),
+    set((state) => {
+      const updateCart = state.cart.filter(
+        (product) => product.id !== productId
+      );
+      localStorage.setItem("cart", JSON.stringify(updateCart));
+      return { cart: updateCart };
+    }),
+
+  // Clear Cart
+  clearCart: () =>
+    set(() => {
+      localStorage.removeItem("cart");
+      return { cart: [] };
+    }),
 }));
