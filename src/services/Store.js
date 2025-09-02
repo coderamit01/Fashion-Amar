@@ -27,6 +27,19 @@ export const useProductStore = create((set) => ({
   },
 }));
 
+export const useCategoryStore = create((set) => ({
+  categoryList: [],
+  fetchCategoryList: async () => {
+    try {
+      const res = await axios.get("https://dummyjson.com/products/categories");
+      const data = res.data;
+      set({ categoryList: data });
+    } catch (error) {
+      console.log(error);
+    }
+  },
+}));
+
 export const useCart = create((set) => ({
   cart: JSON.parse(localStorage.getItem("cart")) || [],
 
@@ -49,22 +62,20 @@ export const useCart = create((set) => ({
       localStorage.setItem("cart", JSON.stringify(updateCart));
       return { cart: updateCart };
     }),
-  increaseCart: (productId) => 
+  increaseCart: (productId) =>
     set((state) => {
       let updateCart = state.cart.map((item) =>
-          item.id === productId
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
+        item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
       );
       localStorage.setItem("cart", JSON.stringify(updateCart));
       return { cart: updateCart };
     }),
-  decreaseCart: (productId) => 
+  decreaseCart: (productId) =>
     set((state) => {
       let updateCart = state.cart.map((item) =>
-          item.id === productId
-            ? { ...item, quantity: Math.max(item.quantity - 1, 1) }
-            : item
+        item.id === productId
+          ? { ...item, quantity: item.quantity > 1 ? item.quantity - 1 : 1 }
+          : item
       );
       localStorage.setItem("cart", JSON.stringify(updateCart));
       return { cart: updateCart };
