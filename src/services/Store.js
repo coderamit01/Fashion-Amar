@@ -49,7 +49,26 @@ export const useCart = create((set) => ({
       localStorage.setItem("cart", JSON.stringify(updateCart));
       return { cart: updateCart };
     }),
-  
+  increaseCart: (productId) => 
+    set((state) => {
+      let updateCart = state.cart.map((item) =>
+          item.id === productId
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+      );
+      localStorage.setItem("cart", JSON.stringify(updateCart));
+      return { cart: updateCart };
+    }),
+  decreaseCart: (productId) => 
+    set((state) => {
+      let updateCart = state.cart.map((item) =>
+          item.id === productId
+            ? { ...item, quantity: Math.max(item.quantity - 1, 1) }
+            : item
+      );
+      localStorage.setItem("cart", JSON.stringify(updateCart));
+      return { cart: updateCart };
+    }),
   // Remove From Cart
   removeCart: (productId) =>
     set((state) => {

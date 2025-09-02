@@ -7,6 +7,8 @@ import { FiMinus, FiPlus } from "react-icons/fi";
 const SideCart = ({ handleSidecart, sideCartOpen }) => {
   const productList = useProductStore((state) => state.productList);
   const cart = useCart((state) => state.cart);
+  const increaseCart = useCart((state) => state.increaseCart);
+  const decreaseCart = useCart((state) => state.decreaseCart);
   const removeProduct = useCart((state) => state.removeCart);
   const addCart = useCart((state) => state.addCart);
 
@@ -52,11 +54,11 @@ const SideCart = ({ handleSidecart, sideCartOpen }) => {
                       <p className="font-brand">{product.quantity} x {product.price} tk</p>
                       <p className="font-brand pb-1">{Math.floor((product.quantity) * (product.price))}tk</p>
                       <div className="flex items-center justify-between bg-slate-300 rounded">
-                        <span className="px-1 cursor-pointer">
+                        <span onClick={() => decreaseCart(product.id)} className="px-1 cursor-pointer">
                           <FiMinus />
                         </span>
                         <span className="px-1">{product.quantity}</span>
-                        <span onClick={() => addCart(product)} className="px-1 cursor-pointer">
+                        <span onClick={() => increaseCart(product.id)} className="px-1 cursor-pointer">
                           <FiPlus />
                         </span>
                       </div>
