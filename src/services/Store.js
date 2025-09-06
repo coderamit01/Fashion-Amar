@@ -56,7 +56,13 @@ export const useCart = create((set) => ({
             : item
         );
       } else {
-        updateCart = [...state.cart, { id: product.id, quantity: 1 }];
+        updateCart = [...state.cart, {
+          id: product.id,
+          quantity: 1,
+          title: product.title,
+          thumbnail: product.thumbnail,
+          price: product.price,
+        }];
       }
 
       localStorage.setItem("cart", JSON.stringify(updateCart));

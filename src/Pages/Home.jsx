@@ -10,7 +10,6 @@ const Home = () => {
   useEffect(() => {
     fetchCategoryList();
   },[fetchCategoryList]);
-  console.log(categoryList)
   return (
     <div>
       <HeroSlider />

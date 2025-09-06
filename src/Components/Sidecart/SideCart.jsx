@@ -1,42 +1,39 @@
 import { FaRegTrashCan } from "react-icons/fa6";
 import PrimaryBtn from "../Share/PrimaryBtn";
 import { MdOutlineClose } from "react-icons/md";
-import { useCart, useProductStore } from "../../services/Store";
+import { useCart } from "../../services/Store";
 import { FiMinus, FiPlus } from "react-icons/fi";
+import { sidebar } from "../../utils/sidebarUtils";
+import { useEffect } from "react";
+import { useLocation } from "react-router";
 
-const SideCart = ({ handleSidecart, sideCartOpen }) => {
-  const productList = useProductStore((state) => state.productList);
+const SideCart = () => {
   const cart = useCart((state) => state.cart);
   const increaseCart = useCart((state) => state.increaseCart);
   const decreaseCart = useCart((state) => state.decreaseCart);
   const removeProduct = useCart((state) => state.removeCart);
-  const addCart = useCart((state) => state.addCart);
+  const { isSidebarOpen, closeSidebar } = sidebar();
+  const location = useLocation();
 
-  const updatedCart = cart.map((cartItem) =>{ 
-    const product = productList.find((product) => product.id === cartItem.id);
-    return {
-      ...product,
-      quantity: cartItem.quantity
-    }}
-  )
-  console.log(updatedCart)
+
+  useEffect(() => {
+    closeSidebar();
+  }, [location.pathname, closeSidebar])
+  console.log(isSidebarOpen)
   return (
     <div
-      className={
-        sideCartOpen
-          ? "transition-all ease-in-out duration-300 h-screen fixed w-85 bg-white right-0 top-0 shadow z-50"
-          : "transition-all ease-in-out duration-300 h-screen fixed w-85 bg-white -right-full top-0 shadow z-50"
-      }
+      className={`transition-all ease-in-out duration-300 h-screen fixed w-85 bg-white top-0 shadow z-50
+        ${isSidebarOpen ? " right-0" : "-right-full"}`}
     >
       <div className="flex flex-col justify-between h-full relative">
         {/* <div className="relative h-full"> */}
         <MdOutlineClose
-          onClick={() => handleSidecart()}
+          onClick={closeSidebar}
           className="text-2xl absolute left-3 top-3"
         />
         <div className="flex-1 justify-baseline h-full p-3 mt-11 mb-22 overflow-y-scroll no-scrollbar">
           <div className="flex flex-col space-y-3">
-            {updatedCart.map((product) => (
+            {cart.map((product) => (
               <div key={product.id} className="flex items-center space-x-3">
                 <div className="h-24 w-24">
                   <img

@@ -5,13 +5,15 @@ import TopBar from "./TopBar";
 import { useCart } from "../../services/Store";
 import { useState } from "react";
 import SideCart from "../Sidecart/SideCart";
+import { sidebar } from "../../utils/sidebarUtils";
 
 const Header = () => {
   const cart = useCart((state) => state.cart);
   const [sideCartOpen, setSideCartOpen] = useState(false);
+  const { openSidebar } = sidebar();
   const handleSidecart = () => {
     setSideCartOpen(!sideCartOpen);
-  }
+  };
   return (
     <div className="shadow">
       <TopBar />
@@ -58,14 +60,17 @@ const Header = () => {
               </NavLink>
             </div>
             <div className="flex items-center space-x-6">
-              <div onClick={() => handleSidecart()} className="relative">
+              <div onClick={openSidebar} className="relative">
                 <span className="inline-flex w-5 h-5 items-center justify-center bg-brand text-white font-brand text-sm font-semibold rounded-full absolute top-[-8px] right-[-12px]">
                   {cart.length}
                 </span>
-                  <FiShoppingCart className="text-xl cursor-pointer" />
+                <FiShoppingCart className="text-xl cursor-pointer" />
               </div>
               <FaRegUser className="text-xl cursor-pointer" />
-              <SideCart handleSidecart={handleSidecart} sideCartOpen={sideCartOpen} />
+              <SideCart
+                handleSidecart={handleSidecart}
+                sideCartOpen={sideCartOpen}
+              />
             </div>
           </div>
         </div>
