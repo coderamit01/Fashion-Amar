@@ -1,12 +1,11 @@
+import { Link } from "react-router";
 
 const SlideItem = ({ slide }) => {
-  const { image} = slide;
+  const { image,title} = slide;
   return (
-    <div
-      style={{ backgroundImage: `url(${image})` }}
-      className="h-[50vh] md:h-[70vh] w-full bg-cover bg-center bg-no-repeat "
-    >
-    </div>
+    <Link to="#">
+      <img src={image} alt={title} className="rounded-xl" />
+    </Link>
   );
 };
 

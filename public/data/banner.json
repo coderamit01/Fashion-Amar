@@ -1,21 +1,28 @@
 [
   {
     "id": 1,
-    "image": "/public/images/banner-1.png",
+    "image": "../sliderimage/img1.jpeg",
     "title": "Everyday Fresh & Clean with Our Products",
     "btn_text": "shop now",
     "btn_url": "/"
   },
   {
     "id": 2,
-    "image": "/public/images/banner-2.png",
+    "image": "../sliderimage/img2.jpeg",
     "title": "Make your Breakfast Healthy and Easy",
     "btn_text": "shop now",
     "btn_url": "/"
   },
   {
     "id": 3,
-    "image": "/public/images/banner-3.png",
+    "image": "../sliderimage/img3.jpeg",
+    "title": "The best Organic Products Online",
+    "btn_text": "shop now",
+    "btn_url": "/"
+  },
+  {
+    "id": 4,
+    "image": "../sliderimage/img4.jpeg",
     "title": "The best Organic Products Online",
     "btn_text": "shop now",
     "btn_url": "/"
