@@ -3,6 +3,7 @@ import HeroSlider from "../Components/HeroSlider/HeroSlider";
 import FeaturedCategory from "../Components/FeaturedCategory/FeaturedCategory";
 import { useCategoryStore } from "../services/Store";
 import { Link } from "react-router";
+import FlashSale from "../Components/Partials/FlashSale";
 
 const Home = () => {
   const categoryList = useCategoryStore((state) => state.categoryList);
@@ -15,7 +16,8 @@ const Home = () => {
 
   console.log(categoryList);
   return (
-    <div>
+    <>
+      {/* Hero section start  */}
       <div className="fashion-container pt-5">
         <div className="grid grid-cols-12 gap-5">
           <div className="col-span-12 md:col-span-8">
@@ -28,7 +30,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
       {/* Category section start  */}
       <div className="py-8 md:py-12">
         <div className="fashion-container">
@@ -39,8 +40,11 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* Category section end  */}
-    </div>
+      {/* Flash Sell section start */}
+      <div className="fashion-container">
+        <FlashSale />
+      </div>
+    </>
   );
 };
 
