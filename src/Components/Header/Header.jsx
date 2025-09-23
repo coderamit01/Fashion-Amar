@@ -14,6 +14,13 @@ const Header = () => {
   const handleSidecart = () => {
     setSideCartOpen(!sideCartOpen);
   };
+
+  const menuItems = [
+    { name: "Home", url: "/" },
+    { name: "Shop", url: "/shop" },
+    { name: "About Us", url: "/about-us" },
+    { name: "Contact us", url: "/contact-us" },
+  ];
   return (
     <div className="shadow">
       <TopBar />
@@ -25,39 +32,14 @@ const Header = () => {
                 Amar<span className="text-brand">Bazar</span>
               </Link>
             </h2>
-            <div className="flex items-center space-x-4">
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive ? "text-brand" : "text-slate-700"
-                }
-              >
-                Home
-              </NavLink>
-              <NavLink
-                to="/shop"
-                className={({ isActive }) =>
-                  isActive ? "text-brand" : "text-slate-700"
-                }
-              >
-                Shop
-              </NavLink>
-              <NavLink
-                to="/about-us"
-                className={({ isActive }) =>
-                  isActive ? "text-brand" : "text-slate-700"
-                }
-              >
-                About Us
-              </NavLink>
-              <NavLink
-                to="/contact-us"
-                className={({ isActive }) =>
-                  isActive ? "text-brand" : "text-slate-700"
-                }
-              >
-                Contact us
-              </NavLink>
+            <div className="hidden md:flex items-center space-x-4">
+              {menuItems.map((menu,idx) => (
+                <NavLink key={idx}
+                  to={menu.url}
+                  className={({ isActive }) => isActive ? "text-brand" : "text-slate-700" } >
+                  {menu.name}
+                </NavLink>
+              ))}
             </div>
             <div className="flex items-center space-x-6">
               <div onClick={openSidebar} className="relative">
@@ -80,3 +62,4 @@ const Header = () => {
 };
 
 export default Header;
+

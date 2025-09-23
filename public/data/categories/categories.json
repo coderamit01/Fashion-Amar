@@ -1,0 +1,58 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "slug": "kids-fashion",
+      "title": "Kids Fashion",
+      "image": "../../assets/categories/category_img_1.png"
+    },
+    {
+      "id": 2,
+      "slug": "mens-fashion",
+      "title": "Men’s Fashion",
+      "image": "../../assets/categories/category_img_2.png"
+    },
+    {
+      "id": 3,
+      "slug": "womens-fashion",
+      "title": "Women's Fashion",
+      "image": "../../assets/categories/category_img_3.png"
+    },
+    {
+      "id": 4,
+      "slug": "denim-collection",
+      "title": "Denim Collection",
+      "image": "../../assets/categories/category_img_4.png"
+    },
+    {
+      "id": 5,
+      "slug": "western-wear",
+      "title": "Western Wear",
+      "image": "../../assets/categories/category_img_5.png"
+    },
+    {
+      "id": 6,
+      "slug": "sport-wear",
+      "title": "Sport Wear",
+      "image": "../../assets/categories/category_img_6.png"
+    },
+    {
+      "id": 8,
+      "slug": "footwear",
+      "title": "Footwear",
+      "image": "../../assets/categories/category_img_7.png"
+    },
+    {
+      "id": 7,
+      "slug": "winter-collection",
+      "title": "Winter Collection",
+      "image": "../../assets/categories/category_img_8.png"
+    },
+    {
+      "id": 9,
+      "slug": "fashion-jewellery",
+      "title": "Fashion Jewellery",
+      "image": "../../assets/categories/category_img_9.png"
+    }
+  ]
+}

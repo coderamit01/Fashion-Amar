@@ -31,9 +31,9 @@ export const useCategoryStore = create((set) => ({
   categoryList: [],
   fetchCategoryList: async () => {
     try {
-      const res = await axios.get("https://dummyjson.com/products/categories");
+      const res = await axios.get("../../public/data/categories/categories.json");
       const data = res.data;
-      set({ categoryList: data });
+      set({ categoryList: data.categories });
     } catch (error) {
       console.log(error);
     }
