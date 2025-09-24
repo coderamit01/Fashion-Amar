@@ -2,57 +2,135 @@
   "categories": [
     {
       "id": 1,
-      "slug": "kids-fashion",
-      "title": "Kids Fashion",
-      "image": "../../assets/categories/category_img_1.png"
+      "slug": "mens-fashion",
+      "title": "Men’s Fashion",
+      "image": "../../assets/categories/category_img_2.png",
+      "subCategories": [
+        {
+          "name": "Shirts",
+          "children": ["Casual Shirts", "Formal Shirts", "Denim Shirts"]
+        },
+        {
+          "name": "Pant",
+          "children": ["Casual Pants", "Formal Trousers", "Jeans & Denim"]
+        },
+        { "name": "Casual Wear" },
+        { "name": "Formal Attire" }
+      ]
     },
     {
       "id": 2,
-      "slug": "mens-fashion",
-      "title": "Men’s Fashion",
-      "image": "../../assets/categories/category_img_2.png"
+      "slug": "womens-fashion",
+      "title": "Women's Fashion",
+      "image": "../../assets/categories/category_img_3.png",
+      "subCategories": [
+        { "name": "Sharee" },
+        {
+          "name": "Shirts",
+          "children": ["Full Sleeves Printed", "Full Sleeves Solid", "Half Sleeves Solid"]
+        },
+        {
+          "name": "T-Shirts",
+          "children": ["Crew Neck", "V Neck", "Henley Neck"]
+        },
+        { "name": "Nightie Set" },
+        { "name": "3-Piece" },
+        { "name": "Leggings" }
+      ]
     },
     {
       "id": 3,
-      "slug": "womens-fashion",
-      "title": "Women's Fashion",
-      "image": "../../assets/categories/category_img_3.png"
+      "slug": "kids-fashion",
+      "title": "Kids Fashion",
+      "image": "../../assets/categories/category_img_1.png",
+      "subCategories": [
+        { "name": "Boys’ Fashion" },
+        { "name": "Girls’ Fashion" },
+        {
+          "name": "Newborn Essentials",
+          "children": ["Sleepwear", "Loungewear"]
+        },
+        { "name": "Party & Occasion Wear" },
+        { "name": "Winter Warmers" },
+        { "name": "Summer Coolers" }
+      ]
     },
     {
       "id": 4,
       "slug": "denim-collection",
       "title": "Denim Collection",
-      "image": "../../assets/categories/category_img_4.png"
+      "image": "../../assets/categories/category_img_4.png",
+      "subCategories": [
+        { "name": "Denim Essentials" },
+        { "name": "Jeans & Bottoms" },
+        { "name": "Denim Jackets" },
+        { "name": "Outerwear" },
+        { "name": "Denim Shirts & Tops" },
+        { "name": "Denim Shorts" }
+      ]
     },
     {
       "id": 5,
       "slug": "western-wear",
       "title": "Western Wear",
-      "image": "../../assets/categories/category_img_5.png"
+      "image": "../../assets/categories/category_img_5.png",
+      "subCategories": [
+        { "name": "Dresses & Jumpsuits" },
+        { "name": "Tops & Blouses" },
+        { "name": "T-Shirts & Tank Tops" },
+        { "name": "Jeans & Denim" },
+        { "name": "Trousers & Pants" },
+        { "name": "Skirts & Shorts" },
+        { "name": "Blazers & Jackets" }
+      ]
     },
     {
       "id": 6,
       "slug": "sport-wear",
       "title": "Sport Wear",
-      "image": "../../assets/categories/category_img_6.png"
-    },
-    {
-      "id": 8,
-      "slug": "footwear",
-      "title": "Footwear",
-      "image": "../../assets/categories/category_img_7.png"
+      "image": "../../assets/categories/category_img_6.png",
+      "subCategories": [
+        { "name": "Men’s Activewear" },
+        { "name": "Women’s Activewear" },
+        { "name": "Gym & Training Gear" },
+        { "name": "Running Apparel" },
+        { "name": "Yoga & Athleisure" }
+      ]
     },
     {
       "id": 7,
+      "slug": "footwear",
+      "title": "Footwear",
+      "image": "../../assets/categories/category_img_7.png",
+      "subCategories": [
+        { "name": "Men’s Footwear" },
+        { "name": "Women’s Footwear" },
+        { "name": "Casual Shoes" },
+        { "name": "Formal Shoes" },
+        { "name": "Boots & Winter Wear" },
+        { "name": "Sandals & Slippers" }
+      ]
+    },
+    {
+      "id": 8,
       "slug": "winter-collection",
       "title": "Winter Collection",
-      "image": "../../assets/categories/category_img_8.png"
+      "image": "../../assets/categories/category_img_8.png",
+      "subCategories": []
     },
     {
       "id": 9,
       "slug": "fashion-jewellery",
       "title": "Fashion Jewellery",
-      "image": "../../assets/categories/category_img_9.png"
+      "image": "../../assets/categories/category_img_9.png",
+      "subCategories": [
+        { "name": "Necklaces & Pendants" },
+        { "name": "Earrings & Studs" },
+        { "name": "Bracelets & Bangles" },
+        { "name": "Rings & Finger Jewelry" },
+        { "name": "Brooches & Pins" },
+        { "name": "Hair Accessories" }
+      ]
     }
   ]
 }

@@ -6,7 +6,7 @@ export const useProductStore = create((set) => ({
   productList: [],
   fetchProductList: async () => {
     try {
-      const res = await axios.get("https://dummyjson.com/products");
+      const res = await axios.get("../../public/data/products/products.json");
       set((state) => {
         const newData = res.data.products;
         const existingData = state.productList;
