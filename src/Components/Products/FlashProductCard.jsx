@@ -1,17 +1,14 @@
 import { Link } from "react-router";
 import CartBtn from "../Share/CartBtn";
-import { useCart } from "../../services/Store";
 
-const ProductCard = ({ product }) => {
+const FlashProductCard = ({ product }) => {
   const {
-    id,
-    title,
-    image,
-    rating,
-    category,
-    price,
-    discountPercentage,
-    brand,
+      id,
+      title,
+      image,
+      category,
+      price,
+      discountPercentage
   } = product;
   const discountPrice = price - (price * discountPercentage) / 100;
 
@@ -27,16 +24,13 @@ const ProductCard = ({ product }) => {
         <h4 className="font-brand text-lg text-stone-950 font-semibold leading-[20px] h-[38px] overflow-hidden">
           <Link to={`/product/${id}`}>{title}</Link>
         </h4>
-        <span className="text-sm text-gray-500 font-brand capitalize">
-          Rating: ({rating})
-        </span>
         <div className="flex flex-col md:flex-row items-start md:items-center md:justify-between space-y-2 md:space-y-0 md:space-x-1 pb-1">
           <div className="flex items-center space-x-2">
+            <span className="font-lg font-brand font-bold text-slate-900">
+              ${Math.round(discountPrice)}
+            </span>
             <span className="font-base font-brand line-through text-gray-600">
               ${price}
-            </span>
-            <span className="font-lg font-brand font-bold text-[#5CAF90]">
-              ${Math.round(discountPrice)}
             </span>
           </div>
         </div>
@@ -46,4 +40,4 @@ const ProductCard = ({ product }) => {
   );
 };
 
-export default ProductCard;
+export default FlashProductCard;

@@ -41,10 +41,8 @@ const Shop = () => {
   const handleSelectCategory = (value) => {
     setSelectCategory(value)
   };
-
   return (
     <div className="fashion-container">
-      {console.log(selectCategory)}
       <div className="grid grid-cols-12  gap-5 py-10">
         <ProductSidebar handleCategory={handleSelectCategory} />
         <ArchiveProducts

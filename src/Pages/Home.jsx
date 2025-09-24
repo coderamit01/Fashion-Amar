@@ -13,8 +13,6 @@ const Home = () => {
   useEffect(() => {
     fetchCategoryList();
   }, [fetchCategoryList]);
-
-  console.log(categoryList);
   return (
     <>
       {/* Hero section start  */}

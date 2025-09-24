@@ -19,7 +19,6 @@ const SideCart = () => {
   useEffect(() => {
     closeSidebar();
   }, [location.pathname, closeSidebar])
-  console.log(isSidebarOpen)
   return (
     <div
       className={`transition-all ease-in-out duration-300 h-screen fixed w-85 bg-white top-0 shadow z-50
