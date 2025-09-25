@@ -13,16 +13,16 @@ const FlashSale = () => {
     }
     getData();
   },[productList])
-
+  console.log(productList)
   return (
-    <div className="pt-5 pb-10">
+    <div className="pb-8 md:pb-12">
       <div className="flex items-center justify-between gap-3">
         <SectionTitle text="Flash Sell" />
-        <ViewAllBtn text="View All" url="#" />
+        <ViewAllBtn text="View All" url="/shop" />
       </div>
-      <div className="grid grid-cols-5 gap-4 pt-4">
+      <div className="grid grid-cols-5 gap-4 pt-8">
         {
-          productList.map((product) => (
+          productList.slice(0,5).map((product) => (
             <FlashProductCard key={product.id} product={product} />
           ))
         }
