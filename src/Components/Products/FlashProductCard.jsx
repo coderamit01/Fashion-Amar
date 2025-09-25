@@ -7,7 +7,7 @@ const FlashProductCard = ({ product }) => {
   const discountPrice = price - (price * discountPercentage) / 100;
 
   return (
-    <div className="transition border border-[#ececec] rounded-xl hover:shadow-new hover:border-[#BCE3C9] bg-white relative flex flex-col justify-between">
+    <div className="transition border border-[#ececec] rounded-xl hover:shadow-new hover:border-[#BCE3C9] bg-white relative flex flex-col justify-between h-full">
       <div className="pb-[6px]">
         <Link to={`/product/${id}`}>
           <img src={image} alt={title} />
@@ -17,7 +17,7 @@ const FlashProductCard = ({ product }) => {
           <span className="text-sm text-gray-500 font-brand capitalize">
             {category}
           </span>
-          <h4 className="transition font-brand text-lg text-stone-950 hover:text-brand font-semibold leading-[20px] ">
+          <h4 className="transition font-brand text-base text-stone-950 hover:text-brand font-semibold leading-[20px] ">
             <Link to={`/product/${id}`}>{title}</Link>
           </h4>
           <div className="flex flex-col md:flex-row items-start md:items-center md:justify-between space-y-2 md:space-y-0 md:space-x-1 pb-1">

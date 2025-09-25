@@ -18,11 +18,17 @@
 }
 .swiper-button-prev,
 .swiper-button-next {
-  @apply transition-all !h-9 !w-9 border-2 border-brand bg-transparent hover:bg-brand text-white rounded;
+  @apply transition-all !h-6 !w-6 !p-3 border-2 border-brand !bg-brand text-white rounded;
 }
 .swiper-button-prev:after,
 .swiper-button-next:after {
-  @apply !text-sm text-white;
+  @apply !text-[15px] text-white;
+}
+.swiper-button-prev {
+  @apply !left-0;
+}
+.swiper-button-next {
+  @apply !right-0;
 }
 .swiper-pagination-bullet {
   @apply transition-all !h-[10px] !w-[10px] !bg-slate-100 !opacity-90 !border-0;
