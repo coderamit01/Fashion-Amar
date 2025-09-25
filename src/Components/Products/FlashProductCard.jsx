@@ -22,7 +22,7 @@ const FlashProductCard = ({ product }) => {
           </h4>
           <div className="flex flex-col md:flex-row items-start md:items-center md:justify-between space-y-2 md:space-y-0 md:space-x-1 pb-1">
             <div className="flex items-center space-x-2">
-              <span className="text-xl font-brand font-bold text-slate-900">
+              <span className="text-xl font-brand font-semibold text-stone-900">
                 ${Math.round(discountPrice)}
               </span>
               <span className="text-base font-brand line-through text-gray-600">
