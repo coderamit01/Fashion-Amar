@@ -1,5 +1,6 @@
 import { FiShoppingCart } from "react-icons/fi";
 import { useCart } from "../../services/Store";
+import PropTypes from "prop-types";
 
 const CartBtn = ({ text,product }) => {
   const addCart = useCart((state) => state.addCart);
@@ -11,5 +12,10 @@ const CartBtn = ({ text,product }) => {
     </div>
   );
 };
+
+CartBtn.propTypes = {
+  text: PropTypes.string.isRequired,
+  product: PropTypes.object.isRequired
+}
 
 export default CartBtn;

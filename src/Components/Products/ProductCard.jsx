@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import CartBtn from "../Share/CartBtn";
-import { useCart } from "../../services/Store";
 import DiscountLabel from "../Share/DiscountLabel";
+import PropTypes from "prop-types";
 
 const ProductCard = ({ product }) => {
   const {
@@ -27,10 +27,10 @@ const ProductCard = ({ product }) => {
           <span className="text-sm text-gray-500 font-brand capitalize">
             {category}
           </span>
-          <h4 className="font-brand text-lg text-stone-950 font-semibold leading-[20px]">
+          <h4 className="font-brand text-base text-stone-950 font-semibold leading-[20px]">
             <Link to={`/product/${id}`}>{title}</Link>
           </h4>
-          <div className="flex flex-col md:flex-row items-start md:items-center md:justify-between space-y-2 md:space-y-0 md:space-x-1">
+          <div className="flex flex-col md:flex-row items-start md:items-center md:justify-between space-y-2 md:space-y-0 md:space-x-1 pb-1">
             <div className="flex items-center space-x-2">
               <span className="text-xl font-brand font-semibold text-stone-900">
                 ${discountPercentage ?
@@ -50,5 +50,10 @@ const ProductCard = ({ product }) => {
     </div>
   );
 };
+
+ProductCard.propTypes = {
+  product: PropTypes.object.isRequired,
+}
+
 
 export default ProductCard;

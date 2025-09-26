@@ -34,7 +34,7 @@ const FlashSale = () => {
         <Swiper
           modules={[Navigation]}
           effect="fade"
-          loop={discountProducts.length > 1}
+          loop={false}
           autoplay={false}
           pagination={false}
           navigation={true}

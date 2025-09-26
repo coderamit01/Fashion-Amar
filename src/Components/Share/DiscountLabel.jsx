@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 
 
 const DiscountLabel = ({discount}) => {
@@ -5,5 +6,8 @@ const DiscountLabel = ({discount}) => {
     <span className="flex justify-center font-brand font-semibold px-[10px] py-1 bg-maroon text-white rounded-tl-xl rounded-br-xl text-[14px] absolute top-0 left-0 w-[55px]">-{discount}%</span>
   );
 };
+DiscountLabel.propTypes = {
+  discount: PropTypes.number.isRequired
+}
 
 export default DiscountLabel;

@@ -4,6 +4,8 @@ import FeaturedCategory from "../Components/FeaturedCategory/FeaturedCategory";
 import { useCategoryStore } from "../services/Store";
 import { Link } from "react-router";
 import FlashSale from "../Components/Partials/FlashSale";
+import KidsFashion from "../Components/Partials/KidsFashion";
+import MensFashion from "../Components/Partials/MensFashion";
 
 const Home = () => {
   const categoryList = useCategoryStore((state) => state.categoryList);
@@ -19,12 +21,24 @@ const Home = () => {
       <div className="fashion-container pt-5">
         <div className="grid grid-cols-12 gap-5">
           <div className="col-span-12 md:col-span-8">
-              {/* Hero Slide   */}
+            {/* Hero Slide   */}
             <HeroSlider />
           </div>
           <div className="col-span-12 md:col-span-4 flex md:flex-col gap-5">
-            <Link to="#" className="inline-block"><img src="../../public/assets/images/image1.png" alt="Banner" className="rounded-xl" /></Link>
-            <Link to="#" className="inline-block"><img src="../../public/assets/images/image2.png" alt="Banner" className="rounded-xl" /></Link>
+            <Link to="#" className="inline-block">
+              <img
+                src="../../public/assets/images/image1.png"
+                alt="Banner"
+                className="rounded-xl"
+              />
+            </Link>
+            <Link to="#" className="inline-block">
+              <img
+                src="../../public/assets/images/image2.png"
+                alt="Banner"
+                className="rounded-xl"
+              />
+            </Link>
           </div>
         </div>
       </div>
@@ -42,6 +56,37 @@ const Home = () => {
       <div className="fashion-container">
         <FlashSale />
       </div>
+      {/* Flash Sell section end */}
+      {/* Kids Fashion section start */}
+      <div className="fashion-container">
+        <KidsFashion />
+      </div>
+      {/* Kids Fashion section end */}
+      {/* Banner section start */}
+      <div className="fashion-container">
+        <div className="grid grid-cols-2 gap-5">
+          <Link to="/shop">
+            <img
+              className="w-full rounded-xl"
+              src="../../public/assets/images/banner.jpeg"
+              alt=""
+            />
+          </Link>
+          <Link to="/shop">
+            <img
+              className="w-full rounded-xl"
+              src="../../public/assets/images/banner2.jpeg"
+              alt=""
+            />
+          </Link>
+        </div>
+      </div>
+      {/* Banner section end */}
+      {/* Mens Fashion section start */}
+      <div className="fashion-container">
+        <MensFashion />
+      </div>
+      {/* Mens Fashion section end */}
     </>
   );
 };

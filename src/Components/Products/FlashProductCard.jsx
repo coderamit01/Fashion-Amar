@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import CartBtn from "../Share/CartBtn";
 import DiscountLabel from "../Share/DiscountLabel";
+import PropTypes from "prop-types";
 
 const FlashProductCard = ({ product }) => {
   const { id, title, image, category, price, discountPercentage } = product;
@@ -38,5 +39,10 @@ const FlashProductCard = ({ product }) => {
     </div>
   );
 };
+
+FlashProductCard.propTypes = {
+  product: PropTypes.object.isRequired
+}
+
 
 export default FlashProductCard;
