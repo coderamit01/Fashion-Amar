@@ -9,7 +9,7 @@
       "reviewsCount": 19,
       "colors": ["#DB4437", "#638C34", "#ffa500"],
       "availabilityStatus": "In Stock",
-      "category": "Men’s Fashion"
+      "category": "Men's Fashion"
     },
     {
       "id": 2,
@@ -32,7 +32,7 @@
       "reviewsCount": 45,
       "colors": ["#DB4437", "#638C34", "#ffa500"],
       "availabilityStatus": "In Stock",
-      "category": "Men’s Fashion"
+      "category": "Men's Fashion"
     },
     {
       "id": 4,
@@ -54,7 +54,7 @@
       "reviewsCount": 27,
       "colors": ["#DB4437", "#638C34", "#ffa500"],
       "availabilityStatus": "In Stock",
-      "category": "Men’s Footwear"
+      "category": "Men's Footwear"
     },
     {
       "id": 6,
@@ -339,7 +339,7 @@
       "rating": 4.5,
       "reviewsCount": 31,
       "availabilityStatus": "In Stock",
-      "category": "Men’s Footwear",
+      "category": "Men's Footwear",
       "stock": 71,
       "brand": "Raymond",
       "createdAt": "2025-01-22T10:00:00Z",

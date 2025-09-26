@@ -6,6 +6,7 @@ import { Link } from "react-router";
 import FlashSale from "../Components/Partials/FlashSale";
 import KidsFashion from "../Components/Partials/KidsFashion";
 import MensFashion from "../Components/Partials/MensFashion";
+import WomenFashion from "../Components/Partials/WomenFashion";
 
 const Home = () => {
   const categoryList = useCategoryStore((state) => state.categoryList);
@@ -87,6 +88,11 @@ const Home = () => {
         <MensFashion />
       </div>
       {/* Mens Fashion section end */}
+      {/* Women's Fashion section start */}
+      <div className="fashion-container">
+        <WomenFashion />
+      </div>
+      {/* Women's Fashion section end */}
     </>
   );
 };

@@ -23,8 +23,6 @@ const KidsFashion = () => {
   const categoryProducts = productList.filter((product) => {
     return product.category.toLowerCase() === "kids fashion";
   });
-
-  console.log(productList);
   return (
     <div className="pb-8 md:pb-12">
       <div className="flex items-center justify-between gap-3">

@@ -11,7 +11,7 @@ import { Navigation } from "swiper/modules";
 import { Link } from "react-router";
 
 
-const MensFashion = () => {
+const WomenFashion = () => {
   const productList = useProductStore((state) => state.productList);
   const fetchProductList = useProductStore.getState().fetchProductList;
 
@@ -23,12 +23,12 @@ const MensFashion = () => {
   }, [productList]);
 
   const categoryProducts = productList.filter((product) => {
-    return product.category.toLowerCase() === "men's fashion";
+    return product.category.toLowerCase() === "women's fashion";
   });
   return (
-    <div className="py-8 md:py-12">
+    <div className="pb-8 md:pb-12">
       <div className="flex items-center justify-between gap-3">
-        <SectionTitle text="Men's Fashion" />
+        <SectionTitle text="Women's Fashion" />
         <ViewAllBtn text="View All" url="/shop" />
       </div>
       <div className="grid grid-cols-5 gap-5  pt-8">
@@ -72,4 +72,4 @@ const MensFashion = () => {
   );
 };
 
-export default MensFashion;
+export default WomenFashion;
