@@ -1,0 +1,706 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Men's premium formal pant",
+      "image": "../../assets/products/product_30.png",
+      "price": 29.0,
+      "rating": 4.5,
+      "reviewsCount": 19,
+      "colors": ["#DB4437", "#638C34", "#ffa500"],
+      "availabilityStatus": "In Stock",
+      "category": "Men's Fashion"
+    },
+    {
+      "id": 2,
+      "title": "Kids cotton Combo Set",
+      "image": "../../assets/products/product_2.png",
+      "price": 16.0,
+      "discountPercentage": 18,
+      "rating": 4.5,
+      "reviewsCount": 21,
+      "colors": ["#DB4437", "#638C34", "#ffa500"],
+      "availabilityStatus": "In Stock",
+      "category": "kids fashion"
+    },
+    {
+      "id": 3,
+      "title": "Men's T-shirt combo set",
+      "image": "../../assets/products/product_28.png",
+      "price": 17.0,
+      "rating": 4.5,
+      "reviewsCount": 45,
+      "colors": ["#DB4437", "#638C34", "#ffa500"],
+      "availabilityStatus": "In Stock",
+      "category": "Men's Fashion"
+    },
+    {
+      "id": 4,
+      "title": "Full Sleeve Hoodie Jacket",
+      "image": "../../assets/products/product_1.png",
+      "price": 20.0,
+      "rating": 4,
+      "reviewsCount": 33,
+      "colors": ["#DB4437", "#638C34", "#ffa500"],
+      "availabilityStatus": "In Stock",
+      "category": "women's Fashion"
+    },
+    {
+      "id": 5,
+      "title": "Men's trendy formal shoes",
+      "image": "../../assets/products/product_27.png",
+      "price": 10.0,
+      "rating": 4.5,
+      "reviewsCount": 27,
+      "colors": ["#DB4437", "#638C34", "#ffa500"],
+      "availabilityStatus": "In Stock",
+      "category": "Men's Footwear"
+    },
+    {
+      "id": 6,
+      "title": "Women's T-shirt combo",
+      "image": "../../assets/products/product_29.png",
+      "price": 13.0,
+      "rating": 4.5,
+      "reviewsCount": 12,
+      "colors": ["#DB4437", "#638C34", "#ffa500"],
+      "availabilityStatus": "In Stock",
+      "category": "T-Shirts"
+    },
+    {
+      "id": 7,
+      "title": "Denim 2 Quarter Pant",
+      "image": "../../assets/products/product_7.png",
+      "price": 40.0,
+      "rating": 4.5,
+      "reviewsCount": 39,
+      "colors": ["#DB4437", "#638C34", "#ffa500"],
+      "availabilityStatus": "In Stock",
+      "category": "Jeans & Denim"
+    },
+    {
+      "id": 8,
+      "title": "Men's Denim combo set",
+      "image": "../../assets/products/product_9.png",
+      "price": 47.0,
+      "discountPercentage": 15,
+      "rating": 4,
+      "reviewsCount": 41,
+      "colors": ["#DB4437", "#638C34", "#ffa500"],
+      "availabilityStatus": "In Stock",
+      "category": "Denim Collection"
+    },
+    {
+      "id": 9,
+      "title": "Women's Western Party Dress",
+      "image": "../../assets/products/product_10.png",
+      "price": 43.0,
+      "rating": 5,
+      "reviewsCount": 25,
+      "colors": ["#DB4437", "#638C34", "#ffa500"],
+      "availabilityStatus": "In Stock",
+      "category": "Blazers & Jackets"
+    },
+    {
+      "id": 10,
+      "title": "Kid's Western Party Dress",
+      "image": "../../assets/products/product_11.png",
+      "price": 75.0,
+      "discountPercentage": 35,
+      "rating": 5,
+      "reviewsCount": 48,
+      "colors": ["#DB4437", "#638C34", "#ffa500"],
+      "availabilityStatus": "In Stock",
+      "category": "Girls’ Fashion"
+    },
+    {
+      "id": 11,
+      "title": "Denim Jeans Pants For Men",
+      "image": "../../assets/products/product_17.png",
+      "price": 71.0,
+      "rating": 5,
+      "reviewsCount": 37,
+      "colors": ["#DB4437", "#638C34", "#ffa500"],
+      "availabilityStatus": "In Stock",
+      "category": "Jeans & Bottoms"
+    },
+    {
+      "id": 12,
+      "title": "Half Sleeve Tops for Women",
+      "image": "../../assets/products/product_12.png",
+      "price": 29.0,
+      "rating": 4.5,
+      "reviewsCount": 18,
+      "colors": ["#DB4437", "#638C34", "#ffa500"],
+      "availabilityStatus": "In Stock",
+      "category": "Half Sleeves Solid"
+    },
+    {
+      "id": 13,
+      "title": "Sharee Petticoat For Women",
+      "image": "../../assets/products/product_13.png",
+      "price": 56.0,
+      "rating": 5,
+      "reviewsCount": 29,
+      "colors": ["#DB4437", "#638C34", "#ffa500"],
+      "availabilityStatus": "In Stock",
+      "category": "Sharee"
+    },
+    {
+      "id": 14,
+      "title": "Jeans Pants For Women",
+      "image": "../../assets/products/product_14.png",
+      "price": 49.0,
+      "discountPercentage": 50,
+      "rating": 5,
+      "reviewsCount": 34,
+      "colors": ["#DB4437", "#638C34", "#ffa500"],
+      "availabilityStatus": "In Stock",
+      "category": "Women's Fashion"
+    },
+    {
+      "id": 15,
+      "title": "cherry fabric western tops",
+      "image": "../../assets/products/product_16.png",
+      "price": 33.0,
+      "rating": 4.5,
+      "reviewsCount": 14,
+      "colors": ["#DB4437", "#638C34", "#ffa500"],
+      "availabilityStatus": "In Stock",
+      "category": "Women's Fashion"
+    },
+    {
+      "id": 16,
+      "title": "Denim Shirt For Men",
+      "image": "../../assets/products/product_15.png",
+      "price": 40.0,
+      "discountPercentage": 75,
+      "rating": 4.5,
+      "reviewsCount": 40,
+      "colors": ["#DB4437", "#638C34", "#ffa500"],
+      "availabilityStatus": "In Stock",
+      "category": "Denim Shirts"
+    },
+    {
+      "id": 17,
+      "title": "Kid's dresses for summer",
+      "image": "../../assets/products/product_23.png",
+      "price": 16.0,
+      "rating": 4.5,
+      "reviewsCount": 27,
+      "availabilityStatus": "In Stock",
+      "category": "Summer Coolers",
+      "stock": 67,
+      "brand": "Chanel",
+      "createdAt": "2025-01-18T10:00:00Z",
+      "updatedAt": "2025-09-24T16:54:40.556982Z",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Savannah Gomez",
+          "reviewerEmail": "savannah.gomez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Awesome product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Christian Perez",
+          "reviewerEmail": "christian.perez@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Nicholas Bailey",
+          "reviewerEmail": "nicholas.bailey@x.dummyjson.com"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Full Sleeve Hoodie Jacket",
+      "image": "../../assets/products/product_18.png",
+      "price": 17.0,
+      "discountPercentage": 20,
+      "rating": 4.5,
+      "reviewsCount": 28,
+      "availabilityStatus": "In Stock",
+      "category": "Women's Fashion",
+      "stock": 68,
+      "brand": "Puma",
+      "createdAt": "2025-01-19T10:00:00Z",
+      "updatedAt": "2025-09-24T16:54:40.556987Z",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Savannah Gomez",
+          "reviewerEmail": "savannah.gomez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Awesome product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Christian Perez",
+          "reviewerEmail": "christian.perez@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Nicholas Bailey",
+          "reviewerEmail": "nicholas.bailey@x.dummyjson.com"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Men's premium formal shirt",
+      "image": "../../assets/products/product_19.png",
+      "price": 20.0,
+      "discountPercentage": 25,
+      "rating": 4,
+      "reviewsCount": 29,
+      "availabilityStatus": "In Stock",
+      "category": "Formal Shirts",
+      "stock": 69,
+      "brand": "Wrangler",
+      "createdAt": "2025-01-20T10:00:00Z",
+      "updatedAt": "2025-09-24T16:54:40.556992Z",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Savannah Gomez",
+          "reviewerEmail": "savannah.gomez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Awesome product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Christian Perez",
+          "reviewerEmail": "christian.perez@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Nicholas Bailey",
+          "reviewerEmail": "nicholas.bailey@x.dummyjson.com"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "cherry fabric western tops",
+      "image": "../../assets/products/product_20.png",
+      "price": 10.0,
+      "rating": 4.5,
+      "reviewsCount": 30,
+      "availabilityStatus": "In Stock",
+      "category": "Tops & Blouses",
+      "stock": 70,
+      "brand": "Diesel",
+      "createdAt": "2025-01-21T10:00:00Z",
+      "updatedAt": "2025-09-24T16:54:40.556998Z",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Savannah Gomez",
+          "reviewerEmail": "savannah.gomez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Awesome product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Christian Perez",
+          "reviewerEmail": "christian.perez@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Nicholas Bailey",
+          "reviewerEmail": "nicholas.bailey@x.dummyjson.com"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "Comfortable Sports Sneakers",
+      "image": "../../assets/products/product_4.png",
+      "price": 13.0,
+      "rating": 4.5,
+      "reviewsCount": 31,
+      "availabilityStatus": "In Stock",
+      "category": "Men's Footwear",
+      "stock": 71,
+      "brand": "Raymond",
+      "createdAt": "2025-01-22T10:00:00Z",
+      "updatedAt": "2025-09-24T16:54:40.557003Z",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Savannah Gomez",
+          "reviewerEmail": "savannah.gomez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Awesome product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Christian Perez",
+          "reviewerEmail": "christian.perez@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Nicholas Bailey",
+          "reviewerEmail": "nicholas.bailey@x.dummyjson.com"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Women's Western Party Dress",
+      "image": "../../assets/products/product_3.png",
+      "price": 40.0,
+      "rating": 4.5,
+      "reviewsCount": 32,
+      "availabilityStatus": "In Stock",
+      "category": "Western Wear",
+      "stock": 72,
+      "brand": "Nike",
+      "createdAt": "2025-01-23T10:00:00Z",
+      "updatedAt": "2025-09-24T16:54:40.557008Z",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Savannah Gomez",
+          "reviewerEmail": "savannah.gomez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Awesome product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Christian Perez",
+          "reviewerEmail": "christian.perez@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Nicholas Bailey",
+          "reviewerEmail": "nicholas.bailey@x.dummyjson.com"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Kid's Western Party Dress",
+      "image": "../../assets/products/product_5.png",
+      "price": 47.0,
+      "rating": 4,
+      "reviewsCount": 33,
+      "availabilityStatus": "In Stock",
+      "category": "Party & Occasion Wear",
+      "stock": 73,
+      "brand": "Adidas",
+      "createdAt": "2025-01-24T10:00:00Z",
+      "updatedAt": "2025-09-24T16:54:40.557016Z",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Savannah Gomez",
+          "reviewerEmail": "savannah.gomez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Awesome product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Christian Perez",
+          "reviewerEmail": "christian.perez@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Nicholas Bailey",
+          "reviewerEmail": "nicholas.bailey@x.dummyjson.com"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Men's Casual Denim Blazer",
+      "image": "../../assets/products/product_6.png",
+      "price": 43.0,
+      "rating": 5,
+      "reviewsCount": 34,
+      "availabilityStatus": "In Stock",
+      "category": "Denim Essentials",
+      "stock": 74,
+      "brand": "Gucci",
+      "createdAt": "2025-01-25T10:00:00Z",
+      "updatedAt": "2025-09-24T16:54:40.557022Z",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Savannah Gomez",
+          "reviewerEmail": "savannah.gomez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Awesome product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Christian Perez",
+          "reviewerEmail": "christian.perez@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Nicholas Bailey",
+          "reviewerEmail": "nicholas.bailey@x.dummyjson.com"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Kid's Western Party Dress",
+      "image": "../../assets/products/product_8.png",
+      "price": 75.0,
+      "rating": 5,
+      "reviewsCount": 35,
+      "availabilityStatus": "In Stock",
+      "category": "Party & Occasion Wear",
+      "stock": 75,
+      "brand": "Zara",
+      "createdAt": "2025-01-26T10:00:00Z",
+      "updatedAt": "2025-09-24T16:54:40.557028Z",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Savannah Gomez",
+          "reviewerEmail": "savannah.gomez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Awesome product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Christian Perez",
+          "reviewerEmail": "christian.perez@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Nicholas Bailey",
+          "reviewerEmail": "nicholas.bailey@x.dummyjson.com"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "title": "Women's premium Cotton",
+      "image": "../../assets/products/product_21.png",
+      "price": 71.0,
+      "rating": 5,
+      "reviewsCount": 36,
+      "availabilityStatus": "In Stock",
+      "category": "Women's Fashion",
+      "stock": 76,
+      "brand": "H&M",
+      "createdAt": "2025-01-27T10:00:00Z",
+      "updatedAt": "2025-09-24T16:54:40.557033Z",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Savannah Gomez",
+          "reviewerEmail": "savannah.gomez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Awesome product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Christian Perez",
+          "reviewerEmail": "christian.perez@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Nicholas Bailey",
+          "reviewerEmail": "nicholas.bailey@x.dummyjson.com"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "title": "Kid's dresses",
+      "image": "../../assets/products/product_22.png",
+      "price": 29.0,
+      "rating": 4.5,
+      "reviewsCount": 37,
+      "availabilityStatus": "In Stock",
+      "category": "Girls’ Fashion",
+      "stock": 77,
+      "brand": "Levis",
+      "createdAt": "2025-01-28T10:00:00Z",
+      "updatedAt": "2025-09-24T16:54:40.557046Z",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Savannah Gomez",
+          "reviewerEmail": "savannah.gomez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Awesome product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Christian Perez",
+          "reviewerEmail": "christian.perez@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Nicholas Bailey",
+          "reviewerEmail": "nicholas.bailey@x.dummyjson.com"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "title": "Denim casual blazer for men",
+      "image": "../../assets/products/product_24.png",
+      "price": 56.0,
+      "rating": 5,
+      "reviewsCount": 38,
+      "availabilityStatus": "In Stock",
+      "category": "Denim Jackets",
+      "stock": 78,
+      "brand": "Chanel",
+      "createdAt": "2025-01-29T10:00:00Z",
+      "updatedAt": "2025-09-24T16:54:40.557051Z",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Savannah Gomez",
+          "reviewerEmail": "savannah.gomez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Awesome product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Christian Perez",
+          "reviewerEmail": "christian.perez@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Nicholas Bailey",
+          "reviewerEmail": "nicholas.bailey@x.dummyjson.com"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "title": "Half Sleeve Jachket for Women",
+      "image": "../../assets/products/product_25.png",
+      "price": 49.0,
+      "discountPercentage": 50,
+      "rating": 5,
+      "reviewsCount": 39,
+      "availabilityStatus": "In Stock",
+      "category": "Half Sleeves Solid",
+      "stock": 79,
+      "brand": "Puma",
+      "createdAt": "2025-01-30T10:00:00Z",
+      "updatedAt": "2025-09-24T16:54:40.557055Z",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Savannah Gomez",
+          "reviewerEmail": "savannah.gomez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Awesome product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Christian Perez",
+          "reviewerEmail": "christian.perez@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Nicholas Bailey",
+          "reviewerEmail": "nicholas.bailey@x.dummyjson.com"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "title": "Kid's Western Party Dress",
+      "image": "../../assets/products/product_26.png",
+      "price": 29.0,
+      "rating": 4.5,
+      "reviewsCount": 26,
+      "availabilityStatus": "In Stock",
+      "category": "Party & Occasion Wear",
+      "stock": 66,
+      "brand": "Levis",
+      "createdAt": "2025-01-17T10:00:00Z",
+      "updatedAt": "2025-09-24T16:54:40.556972Z",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Savannah Gomez",
+          "reviewerEmail": "savannah.gomez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Awesome product!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Christian Perez",
+          "reviewerEmail": "christian.perez@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2025-04-30T09:41:02.053Z",
+          "reviewerName": "Nicholas Bailey",
+          "reviewerEmail": "nicholas.bailey@x.dummyjson.com"
+        }
+      ]
+    }
+  ]
+}

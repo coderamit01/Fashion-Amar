@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "image": "../sliderimage/1.webp",
+    "title": "Discover the Beauty",
+    "shortdesc": "Explore the world of elegance and style with our latest collection.",
+    "buttonText": "Shop Now",
+    "buttonUrl": "/shop"
+  },
+  {
+    "id": "2",
+    "image": "../sliderimage/2.webp",
+    "title": "Exclusive Offers",
+    "shortdesc": "Grab the best deals on our exclusive products before they're gone!",
+    "buttonText": "View Deals",
+    "buttonUrl": "/shop"
+  }
+]
