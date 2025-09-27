@@ -14,7 +14,7 @@ const HeroSlider = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("../../../public/data/banner.json");
+        const response = await axios.get("../data/banner.json");
         const slideData = await response.data;
         setSlides(slideData);
       } catch (error) {

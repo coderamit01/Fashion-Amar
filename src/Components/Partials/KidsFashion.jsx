@@ -32,7 +32,7 @@ const KidsFashion = () => {
       <div className="grid grid-cols-5 gap-5  pt-8">
         <div className="hidden lg:block">
           <Link to="/shop">
-            <img src="../../public/assets/images/2.jpg" alt="Image" />
+            <img src="/assets/images/2.jpg" alt="Image" />
           </Link>
         </div>
         <div className="col-span-5 lg:col-span-4">

@@ -6,7 +6,7 @@ export const useProductStore = create((set) => ({
   productList: [],
   fetchProductList: async () => {
     try {
-      const res = await axios.get("../../public/data/products/products.json");
+      const res = await axios.get("../data/products/products.json");
       set((state) => {
         const newData = res.data.products;
         const existingData = state.productList;
@@ -31,7 +31,7 @@ export const useCategoryStore = create((set) => ({
   categoryList: [],
   fetchCategoryList: async () => {
     try {
-      const res = await axios.get("../../public/data/categories/categories.json");
+      const res = await axios.get("../data/categories/categories.json");
       const data = res.data;
       set({ categoryList: data.categories });
     } catch (error) {
@@ -56,13 +56,16 @@ export const useCart = create((set) => ({
             : item
         );
       } else {
-        updateCart = [...state.cart, {
-          id: product.id,
-          quantity: 1,
-          title: product.title,
-          thumbnail: product.thumbnail,
-          price: product.price,
-        }];
+        updateCart = [
+          ...state.cart,
+          {
+            id: product.id,
+            quantity: 1,
+            title: product.title,
+            thumbnail: product.thumbnail,
+            price: product.price,
+          },
+        ];
       }
 
       localStorage.setItem("cart", JSON.stringify(updateCart));

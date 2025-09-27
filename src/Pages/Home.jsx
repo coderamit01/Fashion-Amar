@@ -28,14 +28,14 @@ const Home = () => {
           <div className="col-span-12 md:col-span-4 flex md:flex-col gap-5">
             <Link to="#" className="inline-block">
               <img
-                src="../../public/assets/images/image1.png"
+                src="/assets/images/image1.png"
                 alt="Banner"
                 className="rounded-xl"
               />
             </Link>
             <Link to="#" className="inline-block">
               <img
-                src="../../public/assets/images/image2.png"
+                src="/assets/images/image2.png"
                 alt="Banner"
                 className="rounded-xl"
               />
