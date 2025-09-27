@@ -8,6 +8,7 @@ import KidsFashion from "../Components/Partials/KidsFashion";
 import MensFashion from "../Components/Partials/MensFashion";
 import WomenFashion from "../Components/Partials/WomenFashion";
 import BrandSection from "../Components/Partials/BrandSection";
+import Banner from "../Components/Partials/Banner";
 
 const Home = () => {
   const categoryList = useCategoryStore((state) => state.categoryList);
@@ -94,6 +95,11 @@ const Home = () => {
         <WomenFashion />
       </div>
       {/* Women's Fashion section end */}
+      {/* Image section start */}
+      <div className="fashion-container">
+        <Banner />
+      </div>
+      {/* Image section end */}
       {/* Brands section start */}
       <div className="fashion-container">
         <BrandSection />
