@@ -17,7 +17,7 @@ const FlashSale = () => {
       await fetchProductList();
     };
     getData();
-  }, [productList]);
+  }, []);
   const discountProducts = productList
     .filter((product) => {
       if (product?.discountPercentage) {

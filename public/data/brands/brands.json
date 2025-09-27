@@ -1,0 +1,74 @@
+{
+  "brands": [
+    {
+      "id": 1,
+      "name": "Coca Cola",
+      "slug": "coca-cola",
+      "logo": "../../assets/brands/brand1.png",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "name": "FedEx",
+      "slug": "fedex",
+      "logo": "../../assets/brands/brand2.png",
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "name": "Apple",
+      "slug": "apple",
+      "logo": "../../assets/brands/brand3.png",
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "name": "Gong",
+      "slug": "gong",
+      "logo": "../../assets/brands/brand4.png",
+      "status": "active"
+    },
+    {
+      "id": 5,
+      "name": "Sony",
+      "slug": "sony",
+      "logo": "../../assets/brands/brand5.png",
+      "status": "active"
+    },
+    {
+      "id": 6,
+      "name": "Tree House",
+      "slug": "tree-house",
+      "logo": "../../assets/brands/brand6.png",
+      "status": "active"
+    },
+    {
+      "id": 7,
+      "name": "Zapier",
+      "slug": "zapier",
+      "logo": "../../assets/brands/brand7.png",
+      "status": "active"
+    },
+    {
+      "id": 8,
+      "name": "IBM",
+      "slug": "imb",
+      "logo": "../../assets/brands/brand8.png",
+      "status": "active"
+    },
+    {
+      "id": 9,
+      "name": "Huawei",
+      "slug": "huawei",
+      "logo": "../../assets/brands/brand9.png",
+      "status": "active"
+    },
+    {
+      "id": 10,
+      "name": "Brand Ten",
+      "slug": "brand-ten",
+      "logo": "../../assets/brands/brand10.png",
+      "status": "active"
+    }
+  ]
+}

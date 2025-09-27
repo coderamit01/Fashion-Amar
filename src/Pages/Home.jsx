@@ -7,6 +7,7 @@ import FlashSale from "../Components/Partials/FlashSale";
 import KidsFashion from "../Components/Partials/KidsFashion";
 import MensFashion from "../Components/Partials/MensFashion";
 import WomenFashion from "../Components/Partials/WomenFashion";
+import BrandSection from "../Components/Partials/BrandSection";
 
 const Home = () => {
   const categoryList = useCategoryStore((state) => state.categoryList);
@@ -69,14 +70,14 @@ const Home = () => {
           <Link to="/shop">
             <img
               className="w-full rounded-xl"
-              src="../../public/assets/images/banner.jpeg"
+              src="/assets/images/banner.jpeg"
               alt=""
             />
           </Link>
           <Link to="/shop">
             <img
               className="w-full rounded-xl"
-              src="../../public/assets/images/banner2.jpeg"
+              src="/assets/images/banner2.jpeg"
               alt=""
             />
           </Link>
@@ -93,6 +94,11 @@ const Home = () => {
         <WomenFashion />
       </div>
       {/* Women's Fashion section end */}
+      {/* Brands section start */}
+      <div className="fashion-container">
+        <BrandSection />
+      </div>
+      {/* Brands section end */}
     </>
   );
 };

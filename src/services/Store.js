@@ -106,3 +106,17 @@ export const useCart = create((set) => ({
       return { cart: [] };
     }),
 }));
+
+
+export const useBrandsStore = create((set) => ({
+  brandList: [],
+  fetchBrands: async () => {
+    try {
+      const res = await axios.get('../data/brands/brands.json');
+      const data = res.data;
+      set({ brandList: data.brands });
+    } catch (err) {
+      console.log(err)
+    }
+  }
+}))

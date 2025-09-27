@@ -20,7 +20,7 @@ const MensFashion = () => {
       await fetchProductList();
     };
     getData();
-  }, [productList]);
+  }, []);
 
   const categoryProducts = productList.filter((product) => {
     return product.category.toLowerCase() === "men's fashion";

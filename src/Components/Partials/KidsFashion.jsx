@@ -18,7 +18,7 @@ const KidsFashion = () => {
       await fetchProductList();
     };
     getData();
-  }, [productList]);
+  }, []);
 
   const categoryProducts = productList.filter((product) => {
     return product.category.toLowerCase() === "kids fashion";

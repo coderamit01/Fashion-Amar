@@ -16,7 +16,7 @@ const Shop = () => {
       setLoading(false);
     };
     loadData();
-  }, [productList]);
+  }, []);
 
   const getFilterProducts = () => {
     let filtered = productList;
