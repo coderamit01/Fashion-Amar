@@ -28,56 +28,35 @@ const ProductSidebar = ({ handleCategory }) => {
         <h5 className="text-xl font-semibold text-stone-950">Category</h5>
         <div className="flex flex-col space-y-1.5 pt-2">
           {categoryList.map((category) => (
-            <div key={category.id}>
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  name=""
-                  id={category.slug}
-                  className="me-1.5 accent-brand h-4 w-4"
-                />
-                <label htmlFor={category.slug}>
-                  <span className="text-base capitalize text-slate-800 font-brand font-semibold">
-                    {category.title}
-                  </span>
-                </label>
-              </div>
+            <div className="flex flex-col" key={category.id}>
+              <span className="text-base capitalize text-slate-800 font-brand font-semibold">
+                {category.title}
+              </span>
               {category?.subCategories ? (
-                <div>
-                  <div className="flex flex-col ps-3">
-                    {category.subCategories.map((subcat, idx) => (
-                      <div className="flex items-center" key={idx}>
-                        <input
-                          type="checkbox"
-                          name=""
-                          id={idx}
-                          className="me-1.5 accent-brand h-4 w-4"
-                        />
-                        <label htmlFor={idx}>
-                          <span className="text-base capitalize text-slate-800 font-brand font-semibold">
-                            {subcat.name}
-                          </span>
-                        </label>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="flex flex-col ps-3">
-                    {category.subCategories.children.map((children, idx) => (
-                      <div className="flex items-center" key={idx}>
-                        <input
-                          type="checkbox"
-                          name=""
-                          id={idx}
-                          className="me-1.5 accent-brand h-4 w-4"
-                        />
-                        <label htmlFor={idx}>
-                          <span className="text-base capitalize text-slate-800 font-brand font-semibold">
-                            {children}
-                          </span>
-                        </label>
-                      </div>
-                    ))}
-                  </div>
+                <div className="flex flex-col ps-4">
+                  {/* sub categories  */}
+                  {category.subCategories.map((subcategory, idx) => (
+                    <div className="flex flex-col" key={idx}>
+                      <span className="text-base capitalize text-slate-800 font-brand">
+                        {subcategory.name}
+                      </span>
+                      {/* sub category childrens  */}
+                      {subcategory.children ? (
+                        <div className="flex flex-col ps-4">
+                          {subcategory.children.map((child, idx) => (
+                            <span
+                              className="text-base capitalize text-slate-700 font-brand "
+                              key={idx}
+                            >
+                              {child}
+                            </span>
+                          ))}
+                        </div>
+                      ) : (
+                        ""
+                      )}
+                    </div>
+                  ))}
                 </div>
               ) : (
                 ""
