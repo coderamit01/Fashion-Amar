@@ -2,7 +2,7 @@ import { NavLink } from "react-router";
 
 const NotFound = () => {
   return (
-    <div className="h-screen w-full grid items-center justify-center">
+    <div className="w-full grid items-center justify-center">
       <div>
         <h2 className="text-center text-5xl font-bold">404 Not Found</h2>
         <div className="text-center pt-10">
