@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { useCategoryStore, useProductStore } from "../../services/Store";
-import { SiHdfcbank } from "react-icons/si";
 import { BiChevronDown, BiChevronRight } from "react-icons/bi";
 
-const ProductSidebar = ({ handleCategory }) => {
+const ProductSidebar = () => {
   const productList = useProductStore((state) => state.productList);
   const fetchProductList = useProductStore.getState().fetchProductList;
 

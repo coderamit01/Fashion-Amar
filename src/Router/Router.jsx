@@ -4,6 +4,7 @@ import Shop from "../Pages/Shop";
 import Home from "../Pages/Home";
 import SingleProduct from "../Components/SingleProduct/SingleProduct";
 import NotFound from "../Pages/NotFound";
+import Category from "../Pages/Category";
 
 const Router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const Router = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop />,
+      },
+      {
+        path: "/product-category/:categorySlug",
+        element: <Category />
       },
       {
         path: "/product/:id",

@@ -3,7 +3,7 @@
     {
       "id": 1,
       "slug": "mens-fashion",
-      "title": "Men’s Fashion",
+      "title": "Men's Fashion",
       "image": "../../assets/categories/category_img_2.png",
       "subCategories": [
         {
@@ -44,8 +44,8 @@
       "title": "Kids Fashion",
       "image": "../../assets/categories/category_img_1.png",
       "subCategories": [
-        { "name": "Boys’ Fashion" },
-        { "name": "Girls’ Fashion" },
+        { "name": "Boys' Fashion" },
+        { "name": "Girls' Fashion" },
         {
           "name": "Newborn Essentials",
           "children": ["Sleepwear", "Loungewear"]
@@ -90,8 +90,8 @@
       "title": "Sport Wear",
       "image": "../../assets/categories/category_img_6.png",
       "subCategories": [
-        { "name": "Men’s Activewear" },
-        { "name": "Women’s Activewear" },
+        { "name": "Men's Activewear" },
+        { "name": "Women's Activewear" },
         { "name": "Gym & Training Gear" },
         { "name": "Running Apparel" },
         { "name": "Yoga & Athleisure" }
@@ -103,8 +103,8 @@
       "title": "Footwear",
       "image": "../../assets/categories/category_img_7.png",
       "subCategories": [
-        { "name": "Men’s Footwear" },
-        { "name": "Women’s Footwear" },
+        { "name": "Men's Footwear" },
+        { "name": "Women's Footwear" },
         { "name": "Casual Shoes" },
         { "name": "Formal Shoes" },
         { "name": "Boots & Winter Wear" },
