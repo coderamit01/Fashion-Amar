@@ -131,6 +131,12 @@
         { "name": "Brooches & Pins" },
         { "name": "Hair Accessories" }
       ]
+    },
+    {
+      "id": 10,
+      "slug": "beauty",
+      "title": "Beauty",
+      "image": "../../assets/categories/category_img_10.png"
     }
   ]
 }
