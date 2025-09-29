@@ -6,6 +6,7 @@ import { useCart } from "../../services/Store";
 import { useState } from "react";
 import SideCart from "../Sidecart/SideCart";
 import { sidebar } from "../../utils/sidebarUtils";
+import Logo from "../../../public/assets/images/Logo/logo.png";
 
 const Header = () => {
   const cart = useCart((state) => state.cart);
@@ -29,7 +30,7 @@ const Header = () => {
           <div className="flex items-center justify-between space-x-2">
             <h2 className="text-3xl font-brand font-bold">
               <Link to="/">
-                Amar<span className="text-brand">Bazar</span>
+                <img src={Logo} alt="Logo" className="w-25" />
               </Link>
             </h2>
             <div className="hidden md:flex items-center space-x-4">
