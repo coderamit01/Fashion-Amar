@@ -37,7 +37,7 @@ const Header = () => {
               {menuItems.map((menu,idx) => (
                 <NavLink key={idx}
                   to={menu.url}
-                  className={({ isActive }) => isActive ? "text-brand" : "text-slate-700" } >
+                  className={({isActive}) => `text-lg  ${isActive ? "text-brand" : "text-slate-700"}`} >
                   {menu.name}
                 </NavLink>
               ))}
