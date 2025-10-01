@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 
-const CategoryProductSlider = ({products}) => {
+const CategoryProductSlider = ({ products }) => {
   return (
     <Swiper
       modules={[Navigation]}
@@ -32,7 +32,7 @@ const CategoryProductSlider = ({products}) => {
       }}
       spaceBetween={20}
     >
-      {products.map((product) => (
+      {products?.map((product) => (
         <SwiperSlide key={product.id} className="!h-full">
           <ProductCard product={product} />
         </SwiperSlide>

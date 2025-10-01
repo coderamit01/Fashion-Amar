@@ -4,139 +4,626 @@
       "id": 1,
       "slug": "mens-fashion",
       "title": "Men's Fashion",
+      "description": "Explore the latest trends in men's clothing and accessories",
       "image": "../../assets/categories/category_img_2.png",
+      "icon": "user-tie",
+      "isActive": true,
+      "sortOrder": 1,
+      "metadata": {
+        "metaTitle": "Men's Fashion - Shop Latest Trends",
+        "metaDescription": "Discover stylish men's clothing, from casual wear to formal attire",
+        "keywords": ["men's clothing", "men's fashion", "casual wear", "formal wear"]
+      },
       "subCategories": [
         {
+          "id": 101,
           "name": "Shirts",
-          "children": ["Casual Shirts", "Formal Shirts", "Denim Shirts"]
+          "slug": "shirts",
+          "parentId": 1,
+          "isActive": true,
+          "children": [
+            {
+              "id": 1001,
+              "name": "Casual Shirts",
+              "slug": "casual-shirts",
+              "parentId": 101
+            },
+            {
+              "id": 1002,
+              "name": "Formal Shirts",
+              "slug": "formal-shirts",
+              "parentId": 101
+            },
+            {
+              "id": 1003,
+              "name": "Denim Shirts",
+              "slug": "denim-shirts",
+              "parentId": 101
+            }
+          ]
         },
         {
+          "id": 102,
           "name": "Pant",
-          "children": ["Casual Pants", "Formal Trousers", "Jeans & Denim"]
+          "slug": "pant",
+          "parentId": 1,
+          "isActive": true,
+          "children": [
+            {
+              "id": 1004,
+              "name": "Casual Pants",
+              "slug": "casual-pants",
+              "parentId": 102
+            },
+            {
+              "id": 1005,
+              "name": "Formal Trousers",
+              "slug": "formal-trousers",
+              "parentId": 102
+            },
+            {
+              "id": 1006,
+              "name": "Jeans & Denim",
+              "slug": "jeans-denim",
+              "parentId": 102
+            }
+          ]
         },
-        { "name": "Casual Wear" },
-        { "name": "Formal Attire" }
+        {
+          "id": 103,
+          "name": "Casual Wear",
+          "slug": "casual-wear",
+          "parentId": 1,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 104,
+          "name": "Formal Attire",
+          "slug": "formal-attire",
+          "parentId": 1,
+          "isActive": true,
+          "children": []
+        }
       ]
     },
     {
       "id": 2,
       "slug": "womens-fashion",
       "title": "Women's Fashion",
+      "description": "Discover elegant and trendy women's clothing collections",
       "image": "../../assets/categories/category_img_3.png",
+      "icon": "user",
+      "isActive": true,
+      "sortOrder": 2,
+      "metadata": {
+        "metaTitle": "Women's Fashion - Latest Collections",
+        "metaDescription": "Shop women's fashion including sarees, shirts, and traditional wear",
+        "keywords": ["women's clothing", "saree", "women's fashion", "ethnic wear"]
+      },
       "subCategories": [
-        { "name": "Sharee" },
         {
+          "id": 201,
+          "name": "Sharee",
+          "slug": "sharee",
+          "parentId": 2,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 202,
           "name": "Shirts",
-          "children": ["Full Sleeves Printed", "Full Sleeves Solid", "Half Sleeves Solid"]
+          "slug": "shirts",
+          "parentId": 2,
+          "isActive": true,
+          "children": [
+            {
+              "id": 2001,
+              "name": "Full Sleeves Printed",
+              "slug": "full-sleeves-printed",
+              "parentId": 202
+            },
+            {
+              "id": 2002,
+              "name": "Full Sleeves Solid",
+              "slug": "full-sleeves-solid",
+              "parentId": 202
+            },
+            {
+              "id": 2003,
+              "name": "Half Sleeves Solid",
+              "slug": "half-sleeves-solid",
+              "parentId": 202
+            }
+          ]
         },
         {
+          "id": 203,
           "name": "T-Shirts",
-          "children": ["Crew Neck", "V Neck", "Henley Neck"]
+          "slug": "t-shirts",
+          "parentId": 2,
+          "isActive": true,
+          "children": [
+            {
+              "id": 2004,
+              "name": "Crew Neck",
+              "slug": "crew-neck",
+              "parentId": 203
+            },
+            {
+              "id": 2005,
+              "name": "V Neck",
+              "slug": "v-neck",
+              "parentId": 203
+            },
+            {
+              "id": 2006,
+              "name": "Henley Neck",
+              "slug": "henley-neck",
+              "parentId": 203
+            }
+          ]
         },
-        { "name": "Nightie Set" },
-        { "name": "3-Piece" },
-        { "name": "Leggings" }
+        {
+          "id": 204,
+          "name": "Nightie Set",
+          "slug": "nightie-set",
+          "parentId": 2,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 205,
+          "name": "3-Piece",
+          "slug": "3-piece",
+          "parentId": 2,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 206,
+          "name": "Leggings",
+          "slug": "leggings",
+          "parentId": 2,
+          "isActive": true,
+          "children": []
+        }
       ]
     },
     {
       "id": 3,
       "slug": "kids-fashion",
       "title": "Kids Fashion",
+      "description": "Adorable and comfortable clothing for your little ones",
       "image": "../../assets/categories/category_img_1.png",
+      "icon": "baby",
+      "isActive": true,
+      "sortOrder": 3,
+      "metadata": {
+        "metaTitle": "Kids Fashion - Cute & Comfortable Clothing",
+        "metaDescription": "Shop kids' fashion for boys, girls, and newborns",
+        "keywords": ["kids clothing", "children's fashion", "boys wear", "girls wear"]
+      },
       "subCategories": [
-        { "name": "Boys' Fashion" },
-        { "name": "Girls' Fashion" },
         {
-          "name": "Newborn Essentials",
-          "children": ["Sleepwear", "Loungewear"]
+          "id": 301,
+          "name": "Boys' Fashion",
+          "slug": "boys-fashion",
+          "parentId": 3,
+          "isActive": true,
+          "children": []
         },
-        { "name": "Party & Occasion Wear" },
-        { "name": "Winter Warmers" },
-        { "name": "Summer Coolers" }
+        {
+          "id": 302,
+          "name": "Girls' Fashion",
+          "slug": "girls-fashion",
+          "parentId": 3,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 303,
+          "name": "Newborn Essentials",
+          "slug": "newborn-essentials",
+          "parentId": 3,
+          "isActive": true,
+          "children": [
+            {
+              "id": 3001,
+              "name": "Sleepwear",
+              "slug": "sleepwear",
+              "parentId": 303
+            },
+            {
+              "id": 3002,
+              "name": "Loungewear",
+              "slug": "loungewear",
+              "parentId": 303
+            }
+          ]
+        },
+        {
+          "id": 304,
+          "name": "Party & Occasion Wear",
+          "slug": "party-occasion-wear",
+          "parentId": 3,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 305,
+          "name": "Winter Warmers",
+          "slug": "winter-warmers",
+          "parentId": 3,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 306,
+          "name": "Summer Coolers",
+          "slug": "summer-coolers",
+          "parentId": 3,
+          "isActive": true,
+          "children": []
+        }
       ]
     },
     {
       "id": 4,
       "slug": "denim-collection",
       "title": "Denim Collection",
+      "description": "Premium denim wear for every style and occasion",
       "image": "../../assets/categories/category_img_4.png",
+      "icon": "shirt",
+      "isActive": true,
+      "sortOrder": 4,
+      "metadata": {
+        "metaTitle": "Denim Collection - Jeans, Jackets & More",
+        "metaDescription": "Explore our extensive denim collection including jeans, jackets, and shirts",
+        "keywords": ["denim", "jeans", "denim jackets", "denim shirts"]
+      },
       "subCategories": [
-        { "name": "Denim Essentials" },
-        { "name": "Jeans & Bottoms" },
-        { "name": "Denim Jackets" },
-        { "name": "Outerwear" },
-        { "name": "Denim Shirts & Tops" },
-        { "name": "Denim Shorts" }
+        {
+          "id": 401,
+          "name": "Denim Essentials",
+          "slug": "denim-essentials",
+          "parentId": 4,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 402,
+          "name": "Jeans & Bottoms",
+          "slug": "jeans-bottoms",
+          "parentId": 4,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 403,
+          "name": "Denim Jackets",
+          "slug": "denim-jackets",
+          "parentId": 4,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 404,
+          "name": "Outerwear",
+          "slug": "outerwear",
+          "parentId": 4,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 405,
+          "name": "Denim Shirts & Tops",
+          "slug": "denim-shirts-tops",
+          "parentId": 4,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 406,
+          "name": "Denim Shorts",
+          "slug": "denim-shorts",
+          "parentId": 4,
+          "isActive": true,
+          "children": []
+        }
       ]
     },
     {
       "id": 5,
       "slug": "western-wear",
       "title": "Western Wear",
+      "description": "Contemporary western fashion for the modern wardrobe",
       "image": "../../assets/categories/category_img_5.png",
+      "icon": "sparkles",
+      "isActive": true,
+      "sortOrder": 5,
+      "metadata": {
+        "metaTitle": "Western Wear - Modern Fashion Collection",
+        "metaDescription": "Shop western wear including dresses, tops, and blazers",
+        "keywords": ["western wear", "dresses", "blazers", "modern fashion"]
+      },
       "subCategories": [
-        { "name": "Dresses & Jumpsuits" },
-        { "name": "Tops & Blouses" },
-        { "name": "T-Shirts & Tank Tops" },
-        { "name": "Jeans & Denim" },
-        { "name": "Trousers & Pants" },
-        { "name": "Skirts & Shorts" },
-        { "name": "Blazers & Jackets" }
+        {
+          "id": 501,
+          "name": "Dresses & Jumpsuits",
+          "slug": "dresses-jumpsuits",
+          "parentId": 5,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 502,
+          "name": "Tops & Blouses",
+          "slug": "tops-blouses",
+          "parentId": 5,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 503,
+          "name": "T-Shirts & Tank Tops",
+          "slug": "t-shirts-tank-tops",
+          "parentId": 5,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 504,
+          "name": "Jeans & Denim",
+          "slug": "jeans-denim",
+          "parentId": 5,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 505,
+          "name": "Trousers & Pants",
+          "slug": "trousers-pants",
+          "parentId": 5,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 506,
+          "name": "Skirts & Shorts",
+          "slug": "skirts-shorts",
+          "parentId": 5,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 507,
+          "name": "Blazers & Jackets",
+          "slug": "blazers-jackets",
+          "parentId": 5,
+          "isActive": true,
+          "children": []
+        }
       ]
     },
     {
       "id": 6,
       "slug": "sport-wear",
       "title": "Sport Wear",
+      "description": "High-performance activewear for fitness enthusiasts",
       "image": "../../assets/categories/category_img_6.png",
+      "icon": "dumbbell",
+      "isActive": true,
+      "sortOrder": 6,
+      "metadata": {
+        "metaTitle": "Sport Wear - Athletic & Performance Clothing",
+        "metaDescription": "Shop activewear for gym, running, yoga, and all sports",
+        "keywords": ["sportswear", "activewear", "gym wear", "athletic clothing"]
+      },
       "subCategories": [
-        { "name": "Men's Activewear" },
-        { "name": "Women's Activewear" },
-        { "name": "Gym & Training Gear" },
-        { "name": "Running Apparel" },
-        { "name": "Yoga & Athleisure" }
+        {
+          "id": 601,
+          "name": "Men's Activewear",
+          "slug": "mens-activewear",
+          "parentId": 6,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 602,
+          "name": "Women's Activewear",
+          "slug": "womens-activewear",
+          "parentId": 6,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 603,
+          "name": "Gym & Training Gear",
+          "slug": "gym-training-gear",
+          "parentId": 6,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 604,
+          "name": "Running Apparel",
+          "slug": "running-apparel",
+          "parentId": 6,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 605,
+          "name": "Yoga & Athleisure",
+          "slug": "yoga-athleisure",
+          "parentId": 6,
+          "isActive": true,
+          "children": []
+        }
       ]
     },
     {
       "id": 7,
       "slug": "footwear",
       "title": "Footwear",
+      "description": "Step out in style with our footwear collection",
       "image": "../../assets/categories/category_img_7.png",
+      "icon": "shoe-prints",
+      "isActive": true,
+      "sortOrder": 7,
+      "metadata": {
+        "metaTitle": "Footwear - Shoes for Every Occasion",
+        "metaDescription": "Shop footwear collection including casual, formal, and sports shoes",
+        "keywords": ["shoes", "footwear", "sneakers", "boots", "sandals"]
+      },
       "subCategories": [
-        { "name": "Men's Footwear" },
-        { "name": "Women's Footwear" },
-        { "name": "Casual Shoes" },
-        { "name": "Formal Shoes" },
-        { "name": "Boots & Winter Wear" },
-        { "name": "Sandals & Slippers" }
+        {
+          "id": 701,
+          "name": "Men's Footwear",
+          "slug": "mens-footwear",
+          "parentId": 7,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 702,
+          "name": "Women's Footwear",
+          "slug": "womens-footwear",
+          "parentId": 7,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 703,
+          "name": "Casual Shoes",
+          "slug": "casual-shoes",
+          "parentId": 7,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 704,
+          "name": "Formal Shoes",
+          "slug": "formal-shoes",
+          "parentId": 7,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 705,
+          "name": "Boots & Winter Wear",
+          "slug": "boots-winter-wear",
+          "parentId": 7,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 706,
+          "name": "Sandals & Slippers",
+          "slug": "sandals-slippers",
+          "parentId": 7,
+          "isActive": true,
+          "children": []
+        }
       ]
     },
     {
       "id": 8,
       "slug": "winter-collection",
       "title": "Winter Collection",
+      "description": "Stay warm and stylish with our winter collection",
       "image": "../../assets/categories/category_img_8.png",
+      "icon": "snowflake",
+      "isActive": true,
+      "sortOrder": 8,
+      "metadata": {
+        "metaTitle": "Winter Collection - Warm & Cozy Clothing",
+        "metaDescription": "Explore our winter collection of jackets, sweaters, and warm accessories",
+        "keywords": ["winter wear", "jackets", "sweaters", "warm clothing"]
+      },
       "subCategories": []
     },
     {
       "id": 9,
       "slug": "fashion-jewellery",
       "title": "Fashion Jewellery",
+      "description": "Elegant accessories to complete your look",
       "image": "../../assets/categories/category_img_9.png",
+      "icon": "gem",
+      "isActive": true,
+      "sortOrder": 9,
+      "metadata": {
+        "metaTitle": "Fashion Jewellery - Trendy Accessories",
+        "metaDescription": "Shop fashion jewellery including necklaces, earrings, and bracelets",
+        "keywords": ["jewellery", "accessories", "necklaces", "earrings", "bracelets"]
+      },
       "subCategories": [
-        { "name": "Necklaces & Pendants" },
-        { "name": "Earrings & Studs" },
-        { "name": "Bracelets & Bangles" },
-        { "name": "Rings & Finger Jewelry" },
-        { "name": "Brooches & Pins" },
-        { "name": "Hair Accessories" }
+        {
+          "id": 901,
+          "name": "Necklaces & Pendants",
+          "slug": "necklaces-pendants",
+          "parentId": 9,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 902,
+          "name": "Earrings & Studs",
+          "slug": "earrings-studs",
+          "parentId": 9,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 903,
+          "name": "Bracelets & Bangles",
+          "slug": "bracelets-bangles",
+          "parentId": 9,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 904,
+          "name": "Rings & Finger Jewelry",
+          "slug": "rings-finger-jewelry",
+          "parentId": 9,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 905,
+          "name": "Brooches & Pins",
+          "slug": "brooches-pins",
+          "parentId": 9,
+          "isActive": true,
+          "children": []
+        },
+        {
+          "id": 906,
+          "name": "Hair Accessories",
+          "slug": "hair-accessories",
+          "parentId": 9,
+          "isActive": true,
+          "children": []
+        }
       ]
     },
     {
       "id": 10,
       "slug": "beauty",
       "title": "Beauty",
-      "image": "../../assets/categories/category_img_10.png"
+      "description": "Beauty products for your skincare and makeup needs",
+      "image": "../../assets/categories/category_img_10.png",
+      "icon": "sparkles",
+      "isActive": true,
+      "sortOrder": 10,
+      "metadata": {
+        "metaTitle": "Beauty Products - Skincare & Makeup",
+        "metaDescription": "Discover our range of beauty and cosmetic products",
+        "keywords": ["beauty", "cosmetics", "skincare", "makeup"]
+      },
+      "subCategories": []
     }
   ]
 }

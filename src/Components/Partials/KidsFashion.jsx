@@ -2,10 +2,10 @@ import SectionTitle from "../Share/SectionTitle";
 import ViewAllBtn from "../Share/ViewAllBtn";
 import { useProductStore } from "../../services/Store";
 import { useEffect } from "react";
-import ProductCard from "../Products/ProductCard";
-
 import { Link } from "react-router";
 import CategoryProductSlider from "../Share/CategoryProductSlider";
+
+
 const KidsFashion = () => {
   const productList = useProductStore((state) => state.productList);
   const fetchProductList = useProductStore.getState().fetchProductList;
@@ -17,7 +17,7 @@ const KidsFashion = () => {
     getData();
   }, []);
 
-  const categoryProducts = productList.filter((product) => {
+  const products = productList.filter((product) => {
     return product.category.toLowerCase() === "kids fashion";
   });
   return (
@@ -33,7 +33,7 @@ const KidsFashion = () => {
           </Link>
         </div>
         <div className="col-span-5 lg:col-span-4">
-          <CategoryProductSlider products={categoryProducts} />
+          <CategoryProductSlider products={products} />
         </div>
       </div>
     </div>

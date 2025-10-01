@@ -2,12 +2,6 @@ import SectionTitle from "../Share/SectionTitle";
 import ViewAllBtn from "../Share/ViewAllBtn";
 import { useProductStore } from "../../services/Store";
 import { useEffect } from "react";
-import ProductCard from "../Products/ProductCard";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/effect-fade";
-import { Navigation } from "swiper/modules";
 import { Link } from "react-router";
 import CategoryProductSlider from "../Share/CategoryProductSlider";
 
@@ -23,7 +17,7 @@ const WomenFashion = () => {
     getData();
   }, []);
 
-  const categoryProducts = productList.filter((product) => {
+  const products = productList.filter((product) => {
     return product.category.toLowerCase() === "women's fashion";
   });
   return (
@@ -39,7 +33,7 @@ const WomenFashion = () => {
           </Link>
         </div>
         <div className="col-span-5 lg:col-span-4">
-          <CategoryProductSlider products={categoryProducts} />
+          <CategoryProductSlider products={products} />
         </div>
       </div>
     </div>

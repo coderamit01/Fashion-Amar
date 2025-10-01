@@ -1,5 +1,6 @@
 import ProductCard from "../Products/ProductCard";
 import Loader from "../Loader/Loader";
+import PropTypes from "prop-types";
 
 const ArchiveProducts = ({loading,products}) => {
 
@@ -16,5 +17,10 @@ const ArchiveProducts = ({loading,products}) => {
     </div>
   );
 };
+
+ArchiveProducts.propTypes = {
+  products: PropTypes.array.isRequired,
+  loading: PropTypes.object.isRequired
+}
 
 export default ArchiveProducts;

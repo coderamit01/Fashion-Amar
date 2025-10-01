@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react";
-import { useCategoryStore, useProductStore } from "../../services/Store";
+import { useCategoryStore } from "../../services/Store";
 import { BiChevronDown, BiChevronRight } from "react-icons/bi";
 
 const ProductSidebar = () => {
-  const productList = useProductStore((state) => state.productList);
-  const fetchProductList = useProductStore.getState().fetchProductList;
-
   const categoryList = useCategoryStore((state) => state.categoryList);
   const fetchCategoryList = useCategoryStore.getState().fetchCategoryList;
   const [openCategory, setOpenCategory] = useState(null);
@@ -13,17 +10,11 @@ const ProductSidebar = () => {
 
   useEffect(() => {
     const loadData = async () => {
-      await fetchProductList();
-    };
-    loadData();
-  }, []);
-  useEffect(() => {
-    const loadData = async () => {
       await fetchCategoryList();
     };
     loadData();
   }, []);
-
+  console.log(categoryList)
   const handleCategoryClick = (categoryId) => {
     if (openCategory === categoryId) {
       setOpenCategory(null);
@@ -77,10 +68,10 @@ const ProductSidebar = () => {
                   } flex-col ps-2`}
                 >
                   {/* sub categories  */}
-                  {category.subCategories.map((subcategory, idx) => (
-                    <div className="flex flex-col" key={idx}>
+                  {category.subCategories.map((subcategory) => (
+                    <div className="flex flex-col" key={subcategory.id}>
                       <span
-                        onClick={() => handleSubcategoryClick(idx)}
+                        onClick={() => handleSubcategoryClick(subcategory.id)}
                         className="flex items-center justify-between cursor-pointer hover:bg-gray-50 px-2 py-1"
                       >
                         <span className="text-base text-gray-600 capitalize font-brand">
@@ -88,7 +79,7 @@ const ProductSidebar = () => {
                         </span>
                         {subcategory.children ? (
                           <div>
-                            {openSubCategory === idx ? (
+                            {openSubCategory === subcategory.id ? (
                               <BiChevronDown className="w-5 h-5 text-gray-500" />
                             ) : (
                               <BiChevronRight className="w-5 h-5 text-gray-500" />
@@ -102,15 +93,15 @@ const ProductSidebar = () => {
                       {subcategory.children ? (
                         <div
                           className={`${
-                            openSubCategory === idx ? "flex" : "hidden"
+                            openSubCategory === subcategory.id ? "flex" : "hidden"
                           } flex-col ps-2`}
                         >
-                          {subcategory.children.map((child, idx) => (
+                          {subcategory.children.map((child) => (
                             <span
                               className="text-base capitalize text-slate-600 font-brand cursor-pointer px-2 py-1 hover:bg-gray-50"
-                              key={idx}
+                              key={child.id}
                             >
-                              {child}
+                              {child.name}
                             </span>
                           ))}
                         </div>
