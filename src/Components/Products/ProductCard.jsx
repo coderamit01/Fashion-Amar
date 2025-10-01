@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
   const discountPrice = price - (price * discountPercentage) / 100;
 
   return (
-    <div className="transition border border-[#ececec] rounded-xl hover:shadow-new hover:border-[#BCE3C9] bg-white flex flex-col justify-between relative">
+    <div className="transition border border-[#ececec] rounded-xl hover:shadow-new hover:border-[#BCE3C9] bg-white flex flex-col justify-between relative h-full">
       <div className="pb-[6px]">
         <Link to={`/product/${id}`}>
           <img src={image} alt={title} />
