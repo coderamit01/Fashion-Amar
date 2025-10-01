@@ -62,7 +62,7 @@ export const useCart = create((set) => ({
             id: product.id,
             quantity: 1,
             title: product.title,
-            thumbnail: product.thumbnail,
+            image: product.image,
             price: product.price,
           },
         ];

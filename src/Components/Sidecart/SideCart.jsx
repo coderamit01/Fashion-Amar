@@ -37,7 +37,7 @@ const SideCart = () => {
                 <div className="h-24 w-24">
                   <img
                     className="w-full"
-                    src={product.thumbnail}
+                    src={product.image}
                     alt={product.title}
                   />
                 </div>
