@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import { Navigation } from "swiper/modules";
 import { Link } from "react-router";
+import CategoryProductSlider from "../Share/CategoryProductSlider";
 
 
 const MensFashion = () => {
@@ -38,34 +39,7 @@ const MensFashion = () => {
           </Link>
         </div>
         <div className="col-span-5 lg:col-span-4">
-          <Swiper
-            modules={[Navigation]}
-            effect="fade"
-            loop={false}
-            autoplay={false}
-            pagination={false}
-            navigation={true}
-            speed={800}
-            slidesPerView={2}
-            breakpoints={{
-              768: {
-                slidesPerView: 3,
-              },
-              1024: {
-                slidesPerView: 3,
-              },
-              1200: {
-                slidesPerView: 4,
-              },
-            }}
-            spaceBetween={20}
-          >
-            {categoryProducts.map((product) => (
-              <SwiperSlide key={product.id} className="!h-auto">
-                <ProductCard product={product} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <CategoryProductSlider products={categoryProducts} />
         </div>
       </div>
     </div>
