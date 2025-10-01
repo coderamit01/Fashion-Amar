@@ -4,13 +4,13 @@ import DiscountLabel from "../Share/DiscountLabel";
 import PropTypes from "prop-types";
 
 const FlashProductCard = ({ product }) => {
-  const { id, title, image, category, price, discountPercentage } = product;
+  const { id, title, slug, image, category, price, discountPercentage } = product;
   const discountPrice = price - (price * discountPercentage) / 100;
 
   return (
     <div className="transition border border-[#ececec] rounded-xl hover:shadow-new hover:border-[#BCE3C9] bg-white relative flex flex-col justify-between h-full">
       <div className="pb-[6px]">
-        <Link to={`/product/${id}`}>
+        <Link to={`/product/${slug}`}>
           <img src={image} alt={title} />
         </Link>
         <DiscountLabel discount={discountPercentage} />

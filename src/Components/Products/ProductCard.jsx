@@ -7,6 +7,7 @@ const ProductCard = ({ product }) => {
   const {
     id,
     title,
+    slug,
     image,
     category,
     price,
@@ -17,7 +18,7 @@ const ProductCard = ({ product }) => {
   return (
     <div className="transition border border-[#ececec] rounded-xl hover:shadow-new hover:border-[#BCE3C9] bg-white flex flex-col justify-between relative h-full">
       <div className="pb-[6px]">
-        <Link to={`/product/${id}`}>
+        <Link to={`/product/${slug}`}>
           <img src={image} alt={title} />
         </Link>
         {discountPercentage && (
