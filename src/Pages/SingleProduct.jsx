@@ -21,9 +21,10 @@ const SingleProduct = () => {
   const decreaseCart = useCart((state) => state.decreaseCart);
 
   useEffect(() => {
-    if (productList.length === 0) {
-      fetchProductList();
+    const loadData = async() => {
+      await fetchProductList();
     }
+    loadData();
   }, []);
   // get single product 
   const singleProduct = useMemo(() => {
@@ -48,6 +49,7 @@ const SingleProduct = () => {
       )
       .slice(0, 8);
   }, [productList, category, id]);
+  // cart quantity 
   const cartQuantity = useMemo(() => {
     if (!id) return [];
     return cart.find((item) => item?.id === id)?.quantity;

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useCategoryStore } from "../../services/Store";
 import { BiChevronDown, BiChevronRight } from "react-icons/bi";
+import { Link, NavLink } from "react-router";
 
 const ProductSidebar = () => {
   const categoryList = useCategoryStore((state) => state.categoryList);
@@ -45,9 +46,9 @@ const ProductSidebar = () => {
                 onClick={() => handleCategoryClick(category.id)}
                 className="flex justify-between items-center text-slate-900  cursor-pointer p-1 hover:bg-gray-50"
               >
-                <span className="text-base text-gray-900 capitalize font-brand font-semibold">
+                <NavLink to={`/category/${category?.slug}`} className="text-base text-gray-900 capitalize font-brand font-semibold">
                   {category.title}
-                </span>
+                </NavLink>
                 {category.subCategories ? (
                   <div>
                     {openCategory === category.id ? (
@@ -73,9 +74,9 @@ const ProductSidebar = () => {
                         onClick={() => handleSubcategoryClick(subcategory.id)}
                         className="flex items-center justify-between cursor-pointer hover:bg-gray-50 px-2 py-1"
                       >
-                        <span className="text-base text-gray-600 capitalize font-brand">
+                        <NavLink to={`/category/${subcategory?.slug}`} className="text-base text-gray-600 capitalize font-brand">
                           {subcategory.name}
-                        </span>
+                        </NavLink>
                         {subcategory.children ? (
                           <div>
                             {openSubCategory === subcategory.id ? (
@@ -96,12 +97,12 @@ const ProductSidebar = () => {
                           } flex-col ps-2`}
                         >
                           {subcategory.children.map((child) => (
-                            <span
+                            <NavLink to={`/category/${child?.slug}`}
                               className="text-base capitalize text-slate-600 font-brand cursor-pointer px-2 py-1 hover:bg-gray-50"
                               key={child.id}
                             >
                               {child.name}
-                            </span>
+                            </NavLink>
                           ))}
                         </div>
                       ) : (
