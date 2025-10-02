@@ -1,41 +1,42 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import ArchiveProducts from "../Components/ArchiveProducts/ArchiveProducts";
 import ProductSidebar from "../Components/ProductSidebar/ProductSidebar";
 import { useCategoryStore, useProductStore } from "../services/Store";
 import { useParams } from "react-router";
 
 const Category = () => {
-  const productList = useProductStore((state) => state.productList);
-  const fetchProductList = useProductStore.getState().fetchProductList;
-  const categoryList = useCategoryStore((state) => state.categoryList);
-  const fetchCategoryList = useCategoryStore.getState().fetchCategoryList;
-  const [loading, setLoading] = useState(true);
-
   const { categorySlug } = useParams();
+  const [loading, setLoading] = useState(true);
+  
+  const productList = useProductStore((state) => state.productList);
+  const categoryList = useCategoryStore((state) => state.categoryList);
+  const fetchProductList = useProductStore.getState().fetchProductList;
+  const fetchCategoryList = useCategoryStore.getState().fetchCategoryList;
 
+  // Fetch products & categories
   useEffect(() => {
-    const loadData = async () => {
+    const loadData = async() => {
       await fetchProductList();
-      setLoading(false);
-    };
-    loadData();
-  }, []);
-  useEffect(() => {
-    const loadData = async () => {
       await fetchCategoryList();
       setLoading(false);
-    };
+    }
     loadData();
-  }, [categorySlug]);
+  }, []);
+  
+  // Get category 
+  const getCategory = useMemo(() => {
+    return categoryList.find((category) => category?.slug === categorySlug) || {};
+  }, [categoryList, categorySlug]);
 
-  const getCategory = categoryList.filter(
-    (category) => category.slug === categorySlug
-  );
-  const { title } = getCategory[0] || {};
+  // Get category name
+  const { title } = getCategory;
 
-  const productByCategory = productList.filter(
-    (product) => product.category.toLowerCase() === title.toLowerCase()
-  );
+  // Filter products by category 
+  const productByCategory = useMemo(() => {
+    if (!title) return [];
+    return productList.filter(
+    (product) => product?.category?.toLowerCase() === title.toLowerCase());
+  }, [productList,title]);
 
   return (
     <div>
