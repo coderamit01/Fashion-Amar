@@ -94,7 +94,7 @@ const Footer = () => {
       </div>
       <div className="bg-slate-900 py-4">
         <div className="fashion-container">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row items-center justify-between">
             <p className="text-sm font-inter text-slate-200 text-center mb-1">
             © Copyright 2025 All Rights Reserved
           </p>

@@ -21,7 +21,6 @@ const MensFashion = () => {
     return product.category.toLowerCase() === "men's fashion";
   });
 
-  console.log(products)
   return (
     <div className="py-8 md:py-12">
       <div className="flex items-center justify-between gap-3">

@@ -14,7 +14,6 @@ const ProductSidebar = () => {
     };
     loadData();
   }, []);
-  console.log(categoryList)
   const handleCategoryClick = (categoryId) => {
     if (openCategory === categoryId) {
       setOpenCategory(null);

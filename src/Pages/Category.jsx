@@ -5,38 +5,37 @@ import { useCategoryStore, useProductStore } from "../services/Store";
 import { useParams } from "react-router";
 
 const Category = () => {
-    const productList = useProductStore((state) => state.productList);
+  const productList = useProductStore((state) => state.productList);
   const fetchProductList = useProductStore.getState().fetchProductList;
   const categoryList = useCategoryStore((state) => state.categoryList);
   const fetchCategoryList = useCategoryStore.getState().fetchCategoryList;
-    const [loading, setLoading] = useState(true);
-  
+  const [loading, setLoading] = useState(true);
+
   const { categorySlug } = useParams();
-  
-    useEffect(() => {
-      const loadData = async () => {
-        await fetchProductList();
-        setLoading(false);
-      };
-      loadData();
-    }, []);
-    useEffect(() => {
-      const loadData = async () => {
-        await fetchCategoryList();
-        setLoading(false);
-      };
-      loadData();
-    }, [categorySlug]);
-  
-  const getCategory = categoryList.filter((category) => (
-    category.slug === categorySlug
-  ));
+
+  useEffect(() => {
+    const loadData = async () => {
+      await fetchProductList();
+      setLoading(false);
+    };
+    loadData();
+  }, []);
+  useEffect(() => {
+    const loadData = async () => {
+      await fetchCategoryList();
+      setLoading(false);
+    };
+    loadData();
+  }, [categorySlug]);
+
+  const getCategory = categoryList.filter(
+    (category) => category.slug === categorySlug
+  );
   const { title } = getCategory[0] || {};
 
-  const productByCategory = productList.filter((product) => (
-    product.category.toLowerCase() === title.toLowerCase()
-  ))
-
+  const productByCategory = productList.filter(
+    (product) => product.category.toLowerCase() === title.toLowerCase()
+  );
 
   return (
     <div>

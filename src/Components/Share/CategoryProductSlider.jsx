@@ -8,6 +8,10 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 
 const CategoryProductSlider = ({ products }) => {
+  if (!products || products.length == 0) {
+    return null;
+  }
+
   return (
     <Swiper
       modules={[Navigation]}
@@ -18,7 +22,6 @@ const CategoryProductSlider = ({ products }) => {
       navigation={true}
       speed={800}
       slidesPerView={2}
-      autoHeight={true}
       breakpoints={{
         768: {
           slidesPerView: 3,
@@ -32,8 +35,8 @@ const CategoryProductSlider = ({ products }) => {
       }}
       spaceBetween={20}
     >
-      {products?.map((product) => (
-        <SwiperSlide key={product.id} className="!h-full">
+      {products.map((product) => (
+        <SwiperSlide key={product.id} className="!h-auto">
           <ProductCard product={product} />
         </SwiperSlide>
       ))}
@@ -42,7 +45,7 @@ const CategoryProductSlider = ({ products }) => {
 };
 
 CategoryProductSlider.propTypes = {
-  products: PropTypes.object.isRequired
+  products: PropTypes.arrayOf(PropTypes.object).isRequired
 }
 
 export default CategoryProductSlider;
