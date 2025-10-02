@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from "react";
 import { useParams } from "react-router";
 import CartBtn from "../Components/Share/CartBtn";
-import { useProductStore } from "../services/Store";
+import { useCart, useProductStore } from "../services/Store";
 import StarRatings from "react-star-ratings";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import SectionTitle from "../Components/Share/SectionTitle";
@@ -16,40 +16,42 @@ const SingleProduct = () => {
   const { productSlug } = useParams();
   const productList = useProductStore((state) => state.productList);
   const fetchProductList = useProductStore.getState().fetchProductList;
+  const cart = useCart((state) => state.cart);
+  const increaseCart = useCart((state) => state.increaseCart);
+  const decreaseCart = useCart((state) => state.decreaseCart);
 
   useEffect(() => {
-    const fetchData = async () => {
-      await fetchProductList();
-    };
-    fetchData();
+    if (productList.length === 0) {
+      fetchProductList();
+    }
   }, []);
+  // get single product 
+  const singleProduct = useMemo(() => {
+    return productList.find((product) => product?.slug === productSlug) || {};
+  }, [productList, productSlug]);
+  // destructure product info 
+  const { id, title, image, category, price, discountPercentage, brand, description, reviewsCount, rating, shortDescription, sku, availabilityStatus } = singleProduct;
 
-  const singleProduct = productList.find(
-    (product) => product?.slug === productSlug
-  ) || {};
-  console.log(singleProduct)
-  const {
-    id,
-    title,
-    image,
-    category,
-    price,
-    discountPercentage,
-    brand,
-    description,
-    reviewsCount,
-    rating,
-    shortDescription,
-    sku,
-    availabilityStatus
-  } = singleProduct;
-  const discountPrice = price - (price * discountPercentage) / 100;
+  // discount price 
+  const discountPrice = useMemo(() => {
+    if (!price || !discountPercentage) return price || 0;
+    return price - (price * discountPercentage) / 100;
+  }, [price, discountPercentage]);
+  // Related Products 
   const relatedProducts = useMemo(() => {
+    if (!category || !id) return [];
     return productList
-      .filter((item) => item.category.toLowerCase() === category.toLowerCase() && item.id !== id)
+      .filter(
+        (item) =>
+          item?.category.toLowerCase() === category.toLowerCase() &&
+          item?.id !== id
+      )
       .slice(0, 8);
   }, [productList, category, id]);
-
+  const cartQuantity = useMemo(() => {
+    if (!id) return [];
+    return cart.find((item) => item?.id === id)?.quantity;
+  }, [cart,id]);
   return (
     <>
       <div className="py-5 md:py-15">
@@ -103,11 +105,11 @@ const SingleProduct = () => {
                 </p>
                 <div className="flex space-x-2 items-center py-2">
                   <div className="flex items-center bg-[#F5F5F5] p-1 space-x-[2px] rounded">
-                    <FaMinus className="w-9 h-[30px] flex items-center justify-center text-lg p-2 cursor-pointer" />
+                    <FaMinus onClick={() => decreaseCart(id)} className="w-9 h-[30px] flex items-center justify-center text-lg p-2 cursor-pointer" />
                     <span className="w-12 h-[30px] flex items-center justify-center text-lg p-2 font-semibold text-fblack">
-                      1
+                     {cartQuantity ? cartQuantity : 1}
                     </span>
-                    <FaPlus className="w-9 h-[30px] flex items-center justify-center text-lg p-2 cursor-pointer" />
+                    <FaPlus onClick={() => increaseCart(id)} className="w-9 h-[30px] flex items-center justify-center text-lg p-2 cursor-pointer" />
                   </div>
                   <CartBtn text="Add To Cart" product={singleProduct} />
                 </div>
