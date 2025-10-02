@@ -30,7 +30,7 @@ const Header = () => {
           <div className="flex items-center justify-between space-x-2">
             <h2 className="text-3xl font-brand font-bold">
               <Link to="/">
-                <img src={Logo} alt="Logo" className="w-25" />
+                <img src={Logo} alt="Logo" className="w-30 md:w-40" />
               </Link>
             </h2>
             <div className="hidden md:flex items-center space-x-4">
@@ -49,7 +49,7 @@ const Header = () => {
                 </span>
                 <FiShoppingCart className="text-xl cursor-pointer" />
               </div>
-              <FaRegUser className="text-xl cursor-pointer" />
+              <FaRegUser className="text-xl cursor-pointer m-0" />
               <SideCart
                 handleSidecart={handleSidecart}
                 sideCartOpen={sideCartOpen}

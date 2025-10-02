@@ -33,7 +33,7 @@ const Footer = () => {
         <div className="fashion-container">
           <div className="grid grid-cols-12 gap-5">
             <div className="col-span-12 md:col-span-6 lg:col-span-3 space-y-3">
-              <Link to="/"><img src={Logo} alt="Logo" className="w-[120px] mb-2" /></Link>
+              <Link to="/"><img src={Logo} alt="Logo" className="w-[150px] mb-2" /></Link>
               <p className="font-brand text-base text-slate-900">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, tempore! Exercitationem eius nemo aperiam quis quisquam iure odit doloribus.</p>
               <div className="flex items-center gap-3">
                 <Link className="border border-slate-300 p-3 rounded-full" to="#"><FiFacebook className="text-lg" /></Link>
@@ -72,7 +72,7 @@ const Footer = () => {
                 }
               </div>
             </div>
-            <div className="col-span-6 md:col-span-6 lg:col-span-3">
+            <div className="col-span-12 md:col-span-6 lg:col-span-3">
               <h5 className="font-brand text-xl font-semibold text-slate-900 capitalize">Contact Us</h5>
               <div className="flex flex-col space-y-2 pt-3">
                 <div className="flex items-start gap-2">
