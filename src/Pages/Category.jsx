@@ -3,6 +3,7 @@ import ArchiveProducts from "../Components/ArchiveProducts/ArchiveProducts";
 import ProductSidebar from "../Components/ProductSidebar/ProductSidebar";
 import { useCategoryStore, useProductStore } from "../services/Store";
 import { useParams } from "react-router";
+import { Helmet } from "react-helmet";
 
 const Category = () => {
   const { categorySlug } = useParams();
@@ -38,8 +39,13 @@ const Category = () => {
     (product) => product?.category?.toLowerCase() === title.toLowerCase());
   }, [productList,title]);
 
+  const mainTitle = document.title;
+
   return (
     <div>
+      <Helmet>
+        <title>{title && title} - {mainTitle}</title>
+      </Helmet>
       <div className="text-center text-2xl font-semibold capitalize bg-[#F8F8F8] py-4 px-2">
         {title}
       </div>

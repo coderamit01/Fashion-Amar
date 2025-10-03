@@ -70,8 +70,8 @@ const SideCart = () => {
           </div>
         </div>
         <div className="w-full bg-white flex flex-col flex-1 justify-end items-stretch space-y-2 absolute bottom-0 px-3">
-          <PrimaryBtn text="Cart" />
-          <PrimaryBtn text="Continue Checkout" />
+          <PrimaryBtn url="/cart" text="Cart" />
+          <PrimaryBtn url="/checkout" text="Continue Checkout" />
         </div>
         {/* </div> */}
       </div>

@@ -6,8 +6,10 @@ const TopBar = () => {
   return (
     <div className="bg-brand py-2 relative">
       <div className="fashion-container">
-        <p className="text-white font-inter text-sm text-center">Welcome to Amar Bazar <Link to="/shop" className="italic underline">Shop Now</Link></p>
-        <IoClose className="text-white absolute right-2 top-2 text-xl" />
+        <div className="flex items-center justify-center space-x-1">
+          <p className="text-white font-inter text-sm text-center">Welcome to Amar Bazar <Link to="/shop" className="italic underline">Shop Now</Link></p>
+        <IoClose className="text-white text-xl" />
+        </div>
       </div>
     </div>
   );
