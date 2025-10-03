@@ -15,7 +15,7 @@
   @apply before:content-[''] before:absolute before:h-[18px] before:w-[18px] before:left-0 before:top-[3px] before:border-2 before:border-slate-300 peer-checked:before:bg-[#3BB77E] peer-checked:before:border-[#3BB77E] after:content-[''] after:absolute after:w-[12px] after:h-[8px] after:left-[3px] after:top-[50%] after:translate-y-[-70%] after:border-l-[3px] after:border-b-[3px] after:border-white after:rotate-[-45deg];
 }
 .fashion-container {
-  @apply container lg:max-w-[1530px] mx-auto px-3;
+  @apply container xl:max-w-[1260px] 2xl:max-w-[1530px] mx-auto px-3;
 }
 .swiper-button-prev,
 .swiper-button-next {
