@@ -28,10 +28,11 @@ const SideCart = () => {
         {/* <div className="relative h-full"> */}
         <MdOutlineClose
           onClick={closeSidebar}
-          className="text-2xl absolute left-3 top-3"
+          className="text-2xl absolute left-3 top-3 cursor-pointer"
         />
-        <div className="flex-1 justify-baseline h-full p-3 mt-11 mb-22 overflow-y-scroll no-scrollbar">
-          <div className="flex flex-col space-y-3">
+        <div className="flex-1 justify-baseline h-full p-3 mt-11 mb-24 overflow-y-scroll no-scrollbar">
+          {cart.length > 0 ? 
+            <div className="flex flex-col space-y-3">
             {cart.map((product) => (
               <div key={product.id} className="flex items-center space-x-3">
                 <div className="h-24 w-24">
@@ -68,11 +69,18 @@ const SideCart = () => {
               </div>
             ))}
           </div>
+            : (
+              <div className="h-full flex items-center justify-center p-4">
+                <p className="text-center font-semibold text-base">Looks like Your cart is empty. Start shopping</p>
+              </div>
+          )}
         </div>
-        <div className="w-full bg-white flex flex-col flex-1 justify-end items-stretch space-y-2 absolute bottom-0 px-3">
+        {cart.length > 0 &&
+        <div className="w-full bg-white flex flex-col flex-1 justify-end items-stretch space-y-2 absolute bottom-3 px-3">
           <PrimaryBtn url="/cart" text="Cart" />
           <PrimaryBtn url="/checkout" text="Continue Checkout" />
         </div>
+        }
         {/* </div> */}
       </div>
     </div>
